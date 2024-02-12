@@ -51,7 +51,7 @@
 
 ;; oxocharcoal palette
 
-(local base00 "#050505")
+(local base00 "#161616")
 (local base06 "#ffffff")
 (local base09 "#78a9ff")
 
@@ -73,7 +73,7 @@
                            :base14 "#be95ff"
                            :base15 "#82cfff"
                            :base16 "#ffc37e"
-                           :blend "#090909"
+                           :blend "#131313"
                            :none :NONE})
                      {:base00 base06
                       :base01 (blend-hex base00 base06 0.95)
@@ -131,8 +131,8 @@
 (custom-set-face! :PmenuSel [] {:fg oxocharcoal.base08 :bg oxocharcoal.base02})
 (custom-set-face! :PmenuThumb [] {:fg oxocharcoal.base08 :bg oxocharcoal.base02})
 (custom-set-face! :SpecialKey [] {:fg oxocharcoal.base03 :bg oxocharcoal.none})
-(custom-set-face! :Visual [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
-(custom-set-face! :VisualNOS [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
+(custom-set-face! :Visual [] {:fg oxocharcoal.none :bg oxocharcoal.base02})
+(custom-set-face! :VisualNOS [] {:fg oxocharcoal.none :bg oxocharcoal.base02})
 (custom-set-face! :TooLong [] {:fg oxocharcoal.none :bg oxocharcoal.base02})
 (custom-set-face! :Debug [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
 (custom-set-face! :Macro [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
@@ -180,7 +180,7 @@
 (custom-set-face! :LspReferenceText [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
 (custom-set-face! :LspReferenceread [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
 (custom-set-face! :LspReferenceWrite [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
-(custom-set-face! :LspSignatureActiveParameter [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+(custom-set-face! :LspSignatureActiveParameter [:bold] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
 
 ;; lps-semantic-tokens
 (custom-set-face! "@lsp.type.class" [] {:link "Structure"})
@@ -295,7 +295,7 @@
 ;; regular syntax
 
 (custom-set-face! :Boolean [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Character [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+(custom-set-face! :Character [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
 (custom-set-face! :Comment [:italic]
                   {:fg oxocharcoal.base03 :bg oxocharcoal.none})
 (custom-set-face! :Conceal [] {:fg oxocharcoal.none :bg oxocharcoal.none})
@@ -320,12 +320,12 @@
 (custom-set-face! :SpecialComment [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
 (custom-set-face! :Statement [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 (custom-set-face! :StorageClass [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :String [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :Structure [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+(custom-set-face! :String [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+(custom-set-face! :Structure [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
 (custom-set-face! :Tag [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :Todo [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :Type [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Typedef [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+(custom-set-face! :Todo [:bold] {:fg oxocharcoal.base16 :bg oxocharcoal.none})
+(custom-set-face! :Type [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+(custom-set-face! :Typedef [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
 
 ;; markdown
 
@@ -379,9 +379,9 @@
 
 ;;; punctuation
 
-(custom-set-face! "@punctuation.delimiter" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! "@punctuation.bracket" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! "@punctuation.special" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+(custom-set-face! "@punctuation.delimiter" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+(custom-set-face! "@punctuation.bracket" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+(custom-set-face! "@punctuation.special" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
 
 ;;; literals
 
@@ -413,13 +413,13 @@
 ;; @method.call
 
 (custom-set-face! "@constructor" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@parameter" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+(custom-set-face! "@parameter" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
 
 ;;; keywords
 
-(custom-set-face! "@keyword" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+(custom-set-face! "@keyword" [] {:fg oxocharcoal.base11 :bg oxocharcoal.none})
 (custom-set-face! "@keyword.function" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! "@keyword.operator" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+(custom-set-face! "@keyword.operator" [] {:fg oxocharcoal.base05 :bg oxocharcoal.none})
 
 ;; @keyword.return
 
@@ -450,7 +450,7 @@
 
 (custom-set-face! "@variable" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
 (custom-set-face! "@variable.builtin" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@constant" [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+(custom-set-face! "@constant" [:bold] {:fg oxocharcoal.base11 :bg oxocharcoal.none})
 (custom-set-face! "@constant.builtin" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
 (custom-set-face! "@constant.macro" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
 (custom-set-face! "@namespace" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
