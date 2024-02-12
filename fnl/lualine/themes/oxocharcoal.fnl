@@ -1,14 +1,14 @@
-(local oxocarbon (. (require (.. :oxocarbon)) :oxocarbon))
+(local oxocharcoal (. (require (.. :oxocharcoal)) :oxocharcoal))
 
-(local colors {:color0 oxocarbon.base02
-               :color1 oxocarbon.base10
-               :color2 oxocarbon.base08
-               :color3 oxocarbon.base00
-               :color6 oxocarbon.base04
-               :color7 oxocarbon.base09
-               :color8 oxocarbon.base14
-               :color9 oxocarbon.base12
-               :color10 oxocarbon.base13})
+(local colors {:color0 oxocharcoal.base02
+               :color1 oxocharcoal.base10
+               :color2 oxocharcoal.base08
+               :color3 oxocharcoal.base00
+               :color6 oxocharcoal.base04
+               :color7 oxocharcoal.base09
+               :color8 oxocharcoal.base14
+               :color9 oxocharcoal.base12
+               :color10 oxocharcoal.base13})
 
 {:replace {:a {:fg (. colors :color0) :bg (. colors :color1)}
            :b {:fg (. colors :color2) :bg (. colors :color3)}}
