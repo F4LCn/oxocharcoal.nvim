@@ -236,6 +236,9 @@
 (custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "@variable.builtin"})
 (custom-set-face! "@lsp.typemod.variable.injected" [] {:link "@variable"})
 
+(custom-set-face! "@lsp.type.")
+(custom-set-face! "@lsp.type.class" [] {:link "Class"})
+
 ;; gutter
 
 (custom-set-face! :Folded [] {:fg oxocharcoal.base02 :bg oxocharcoal.base01})
