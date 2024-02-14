@@ -701,4 +701,10 @@
 (custom-set-face! :VimwikiLink [] {:link "markdownUrl"})
 (custom-set-face! :VimwikiCode [] {:link "markdownCode"})
 
+;; Which-key
+(custom-set-face! :WhichKey [] {:link "method"})
+(custom-set-face! :WhichKeyGroup [] {:link "keyword"})
+(custom-set-face! :WhichKeyDesc [] {:link "text"})
+(custom-set-face! :WhichKeyValue [] {:link "comment"})
+
 { : oxocharcoal }
