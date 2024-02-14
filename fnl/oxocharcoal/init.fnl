@@ -183,26 +183,26 @@
 (custom-set-face! :LspSignatureActiveParameter [:bold] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
 
 ;; semantic classes mapping
-(custom-set-face! "keyword" [] {:fg "#A2CCFF" :bg oxocharcoal.none})
-(custom-set-face! "identifier" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "keyword" [] {:fg "#94C4FF" :bg oxocharcoal.none})
+(custom-set-face! "identifier" [] {:fg "#E9B1FF" :bg oxocharcoal.none})
 (custom-set-face! "string" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "escape_char" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "escape_char" [] {:fg "#50B4BE" :bg oxocharcoal.none})
 (custom-set-face! "constant" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "comment" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "todo" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "note" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "warn" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "error" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "preprocessor" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "comment" [] {:fg "#808080" :bg oxocharcoal.none})
+(custom-set-face! "todo" [] {:fg "#C8B47D" :bg oxocharcoal.none})
+(custom-set-face! "note" [] {:fg "#61AFE1" :bg oxocharcoal.none})
+(custom-set-face! "warn" [] {:fg "#E88C00" :bg oxocharcoal.none})
+(custom-set-face! "error" [] {:fg "#DD3962" :bg oxocharcoal.none})
+(custom-set-face! "preprocessor" [] {:fg "#C88CDC" :bg oxocharcoal.none})
 (custom-set-face! "number" [] {:fg "#96BE78" :bg oxocharcoal.none})
 (custom-set-face! "label" [] {:fg "#B7B7B7" :bg oxocharcoal.none})
-(custom-set-face! "operator" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "type" [] {:fg "#96BE78" :bg oxocharcoal.none})
-(custom-set-face! "method" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "operator" [] {:fg "#BED4E0" :bg oxocharcoal.none})
+(custom-set-face! "type" [] {:fg "#E9B1FF" :bg oxocharcoal.none})
+(custom-set-face! "method" [] {:fg "#FFB987" :bg oxocharcoal.none})
 (custom-set-face! "punctuation" [] {:fg "#BED4E0" :bg oxocharcoal.none})
-(custom-set-face! "instance_field" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "instance_field" [] {:fg "#FF9696" :bg oxocharcoal.none})
 (custom-set-face! "decorator" [] {:fg "#BBB529" :bg oxocharcoal.none})
-(custom-set-face! "self_param" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "self_param" [] {:fg "#94C4FF" :bg oxocharcoal.none})
 (custom-set-face! "format_item" [] {:fg "#80FF80" :bg oxocharcoal.none})
 (custom-set-face! "interface" [] {:fg "#FFCF97" :bg oxocharcoal.none})
 (custom-set-face! "namespace" [] {:fg "#E9B1FF" :bg oxocharcoal.none})
@@ -267,8 +267,6 @@
 (custom-set-face! "@lsp.typemod.type.defaultLibrary" [] {})
 (custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {})
 (custom-set-face! "@lsp.typemod.variable.injected" [] {:link "variable"})
-
-(custom-set-face! "@lsp.type.class" [] {:link "type"})
 
 ;; treesitter
 ;;; misc
@@ -356,7 +354,7 @@
 
 ;;; identifiers
 
-(custom-set-face! "@variable" [] {:Link "variable"})
+(custom-set-face! "@variable" [] {:link "variable"})
 (custom-set-face! "@variable.builtin" [] {:link "variable"})
 (custom-set-face! "@constant" [] {:link "constant"})
 (custom-set-face! "@constant.builtin" [] {:link "constant"})
@@ -418,9 +416,6 @@
 ;; @scope
 
 (custom-set-face! "@reference" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-
-(custom-set-face! "@lsp.type.")
-(custom-set-face! "@lsp.type.class" [] {:link "Class"})
 
 ;; gutter
 
