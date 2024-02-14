@@ -245,6 +245,7 @@
 (custom-set-face! "@lsp.type.typeAlias" [] {:link "type"})
 (custom-set-face! "@lsp.type.unresolvedReference" [] {:link "error"})
 (custom-set-face! "@lsp.type.variable" [] {:link "variable"} )
+(custom-set-face! "@lsp.typemod.variable.globalScope" [] {:link "identifier"} )
 (custom-set-face! "@lsp.mod.readonly" [] {})
 (custom-set-face! "@lsp.mod.typeHint" [] {:link "type"})
 (custom-set-face! "@lsp.mod.builtin" [] {})
@@ -356,6 +357,7 @@
 
 (custom-set-face! "@variable" [] {:link "variable"})
 (custom-set-face! "@variable.builtin" [] {:link "variable"})
+(custom-set-face! "@variable.global" [] {:link "identifier"})
 (custom-set-face! "@constant" [] {:link "constant"})
 (custom-set-face! "@constant.builtin" [] {:link "constant"})
 (custom-set-face! "@constant.macro" [] {})
@@ -398,7 +400,6 @@
 ;; @spell
 ;; @nospell
 ;;; non-standard
-;; @variable.global
 ;;; locals
 ;; @definition
 ;; @definition.constant
