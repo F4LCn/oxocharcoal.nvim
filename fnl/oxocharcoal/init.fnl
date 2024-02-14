@@ -165,7 +165,7 @@
 
 ;; ledger
 
-(custom-set-face! "@comment" [] {:link "Comment"})
+; (custom-set-face! "@comment" [] {:link "Comment"})
 (custom-set-face! "@text.literal.commodity" [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
 (custom-set-face! "@number" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 (custom-set-face! "@number.date" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
@@ -182,59 +182,242 @@
 (custom-set-face! :LspReferenceWrite [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
 (custom-set-face! :LspSignatureActiveParameter [:bold] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
 
+;; semantic classes mapping
+(custom-set-face! "keyword" [] {:fg "#A2CCFF" :bg oxocharcoal.none})
+(custom-set-face! "identifier" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "string" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "escape_char" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "constant" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "comment" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "todo" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "note" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "warn" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "error" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "preprocessor" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "number" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "label" [] {:fg "#B7B7B7" :bg oxocharcoal.none})
+(custom-set-face! "operator" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "type" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "method" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "punctuation" [] {:fg "#BED4E0" :bg oxocharcoal.none})
+(custom-set-face! "instance_field" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "decorator" [] {:fg "#BBB529" :bg oxocharcoal.none})
+(custom-set-face! "self_param" [] {:fg "#96BE78" :bg oxocharcoal.none})
+(custom-set-face! "format_item" [] {:fg "#80FF80" :bg oxocharcoal.none})
+(custom-set-face! "interface" [] {:fg "#FFCF97" :bg oxocharcoal.none})
+(custom-set-face! "namespace" [] {:fg "#E9B1FF" :bg oxocharcoal.none})
+(custom-set-face! "parameter" [] {:fg "#97F1FD" :bg oxocharcoal.none})
+(custom-set-face! "variable" [] {:fg "#FFFFFF" :bg oxocharcoal.none})
+(custom-set-face! "symbol" [] {:fg "#E9B1FF" :bg oxocharcoal.none})
+(custom-set-face! "lifetime" [] {:fg "#50B4BE" :bg oxocharcoal.none})
+(custom-set-face! "text" [] {:fg "#DADFE5" :bg oxocharcoal.none})
+(custom-set-face! "text_heading" [] {:fg "#C88CDC" :bg oxocharcoal.none})
+(custom-set-face! "uri" [] {:fg "#61AFE1" :bg oxocharcoal.none})
+
 ;; lps-semantic-tokens
-(custom-set-face! "@lsp.type.class" [] {:link "Structure"})
-(custom-set-face! "@lsp.type.decorator" [] {:link "Decorator"})
-(custom-set-face! "@lsp.type.function" [] {:link "@function"})
-(custom-set-face! "@lsp.type.macro" [] {:link "Macro"})
-(custom-set-face! "@lsp.type.method" [] {:link "@function"})
-(custom-set-face! "@lsp.type.struct" [] {:link "Structure"})
-(custom-set-face! "@lsp.type.type" [] {:link "Type"})
-(custom-set-face! "@lsp.type.typeParameter" [] {:link "Typedef"})
-(custom-set-face! "@lsp.type.selfParameter" [] {:link "@variable.builtin"})
-(custom-set-face! "@lsp.type.builtinConstant" [] {:link "@constant.builtin"})
-(custom-set-face! "@lsp.type.magicFunction" [] {:link "@function.builtin"})
-(custom-set-face! "@lsp.type.boolean" [] {:link "@boolean"})
-(custom-set-face! "@lsp.type.builtinType" [] {:link "@type.builtin"})
-(custom-set-face! "@lsp.type.comment" [] {:link "@comment"})
-(custom-set-face! "@lsp.type.enum" [] {:link "@type"})
-(custom-set-face! "@lsp.type.enumMember" [] {:link "@constant"})
-(custom-set-face! "@lsp.type.escapeSequence" [] {:link "@string.escape"})
-(custom-set-face! "@lsp.type.formatSpecifier" [] {:link "@punctuation.special"})
-;;(custom-set-face! "@lsp.type.interface" [] {})
-(custom-set-face! "@lsp.type.keyword" [] {:link "@keyword"})
-(custom-set-face! "@lsp.type.namespace" [] {:link "@namespace"})
-(custom-set-face! "@lsp.type.number" [] {:link "@number"})
-(custom-set-face! "@lsp.type.operator" [] {:link "@operator"})
-(custom-set-face! "@lsp.type.parameter" [] {:link "@parameter"})
-(custom-set-face! "@lsp.type.property" [] {:link "@property"})
-(custom-set-face! "@lsp.type.selfKeyword" [] {:link "@variable.builtin"})
-(custom-set-face! "@lsp.type.string.rust" [] {:link "@string"})
-(custom-set-face! "@lsp.type.typeAlias" [] {:link "@type.definition"})
-(custom-set-face! "@lsp.type.unresolvedReference" [] {:link "Error"})
-(custom-set-face! "@lsp.type.variable" [] {:link "@variable"} )
-(custom-set-face! "@lsp.mod.readonly" [] {:link "@constant"})
-(custom-set-face! "@lsp.mod.typeHint" [] {:link "Type"})
-(custom-set-face! "@lsp.mod.builtin" [] {:link "Special"})
-(custom-set-face! "@lsp.typemod.class.defaultLibrary" [] {:link "@type.builtin"})
-(custom-set-face! "@lsp.typemod.enum.defaultLibrary" [] {:link "@type.builtin"})
-(custom-set-face! "@lsp.typemod.enumMember.defaultLibrary" [] {:link "@constant.builtin"})
-(custom-set-face! "@lsp.typemod.function.defaultLibrary" [] {:link "@function.builtin"})
-(custom-set-face! "@lsp.typemod.keyword.async" [] {:link "@keyword.coroutine"})
-(custom-set-face! "@lsp.typemod.macro.defaultLibrary" [] {:link "@function.builtin"})
-(custom-set-face! "@lsp.typemod.method.defaultLibrary" [] {:link "@function.builtin"})
-(custom-set-face! "@lsp.typemod.operator.injected" [] {:link "@operator"})
-(custom-set-face! "@lsp.typemod.string.injected" [] {:link "@string"})
-(custom-set-face! "@lsp.typemod.operator.controlFlow" [] {:link "@exception"})
-(custom-set-face! "@lsp.typemod.keyword.documentation" [] {:link "Special"})
-(custom-set-face! "@lsp.typemod.variable.global" [] {:link "@constant"})
-(custom-set-face! "@lsp.typemod.variable.static" [] {:link "@constant"})
-(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "Special"})
-(custom-set-face! "@lsp.typemod.function.builtin" [] {:link "@function.builtin"})
-(custom-set-face! "@lsp.typemod.function.readonly" [] {:link "@method"})
-;;(custom-set-face! "@lsp.typemod.type.defaultLibrary" [] {})
-(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "@variable.builtin"})
-(custom-set-face! "@lsp.typemod.variable.injected" [] {:link "@variable"})
+(custom-set-face! "@lsp.type.class" [] {:link "type"})
+(custom-set-face! "@lsp.type.decorator" [] {:link "decorator"})
+(custom-set-face! "@lsp.type.function" [] {:link "method"})
+(custom-set-face! "@lsp.type.macro" [] {})
+(custom-set-face! "@lsp.type.method" [] {:link "method"})
+(custom-set-face! "@lsp.type.struct" [] {:link "type"})
+(custom-set-face! "@lsp.type.type" [] {:link "type"})
+(custom-set-face! "@lsp.type.typeParameter" [] {:link "keyword"})
+(custom-set-face! "@lsp.type.selfParameter" [] {:link "self_param"})
+(custom-set-face! "@lsp.type.builtinConstant" [] {:link "constant"})
+(custom-set-face! "@lsp.type.magicFunction" [] {:link "method"})
+(custom-set-face! "@lsp.type.boolean" [] {:link "keyword"})
+(custom-set-face! "@lsp.type.builtinType" [] {:link "type"})
+(custom-set-face! "@lsp.type.comment" [] {:link "comment"})
+(custom-set-face! "@lsp.type.enum" [] {:link "type"})
+(custom-set-face! "@lsp.type.enumMember" [] {:link "constant"})
+(custom-set-face! "@lsp.type.escapeSequence" [] {:link "escape_char"})
+(custom-set-face! "@lsp.type.formatSpecifier" [] {:link "format_item"})
+(custom-set-face! "@lsp.type.interface" [] {:link "interface"})
+(custom-set-face! "@lsp.type.keyword" [] {:link "keyword"})
+(custom-set-face! "@lsp.type.namespace" [] {:link "namespace"})
+(custom-set-face! "@lsp.type.number" [] {:link "number"})
+(custom-set-face! "@lsp.type.operator" [] {:link "operator"})
+(custom-set-face! "@lsp.type.parameter" [] {:link "parameter"})
+(custom-set-face! "@lsp.type.property" [] {:link "instance_field"})
+(custom-set-face! "@lsp.type.selfKeyword" [] {:link "self_param"})
+(custom-set-face! "@lsp.type.string.rust" [] {:link "string"})
+(custom-set-face! "@lsp.type.typeAlias" [] {:link "type"})
+(custom-set-face! "@lsp.type.unresolvedReference" [] {:link "error"})
+(custom-set-face! "@lsp.type.variable" [] {:link "variable"} )
+(custom-set-face! "@lsp.mod.readonly" [] {})
+(custom-set-face! "@lsp.mod.typeHint" [] {:link "type"})
+(custom-set-face! "@lsp.mod.builtin" [] {})
+(custom-set-face! "@lsp.typemod.class.defaultLibrary" [] {:link "type"})
+(custom-set-face! "@lsp.typemod.enum.defaultLibrary" [] {:link "type"})
+(custom-set-face! "@lsp.typemod.enumMember.defaultLibrary" [] {:link "constant"})
+(custom-set-face! "@lsp.typemod.function.defaultLibrary" [] {:link "method"})
+(custom-set-face! "@lsp.typemod.keyword.async" [] {:link "keyword"})
+(custom-set-face! "@lsp.typemod.macro.defaultLibrary" [] {})
+(custom-set-face! "@lsp.typemod.method.defaultLibrary" [] {})
+(custom-set-face! "@lsp.typemod.operator.injected" [] {:link "operator"})
+(custom-set-face! "@lsp.typemod.string.injected" [] {:link "string"})
+(custom-set-face! "@lsp.typemod.operator.controlFlow" [] {})
+(custom-set-face! "@lsp.typemod.keyword.documentation" [] {})
+(custom-set-face! "@lsp.typemod.variable.global" [] {:link "symbol"})
+(custom-set-face! "@lsp.typemod.variable.static" [] {})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {})
+(custom-set-face! "@lsp.typemod.function.builtin" [] {})
+(custom-set-face! "@lsp.typemod.function.readonly" [] {})
+(custom-set-face! "@lsp.typemod.type.defaultLibrary" [] {})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {})
+(custom-set-face! "@lsp.typemod.variable.injected" [] {:link "variable"})
+
+(custom-set-face! "@lsp.type.class" [] {:link "type"})
+
+;; treesitter
+;;; misc
+
+(custom-set-face! "@comment" [] {:link "comment"})
+(custom-set-face! "@comment.todo" [] {:link "todo"})
+(custom-set-face! "@comment.note" [] {:link "note"})
+(custom-set-face! "@comment.warning" [] {:link "warn"})
+(custom-set-face! "@comment.error" [] {:link "error"})
+(custom-set-face! "@error" [] {:link "error"})
+
+;; @none
+;; @preproc
+;; @define
+
+(custom-set-face! "@operator" [] {:link "operator"})
+
+;;; punctuation
+
+(custom-set-face! "@punctuation.delimiter" [] {:link "punctuation"})
+(custom-set-face! "@punctuation.bracket" [] {:link "punctuation"})
+(custom-set-face! "@punctuation.special" [] {:link "punctuation"})
+
+;;; literals
+
+(custom-set-face! "@string" [] {:link "string"})
+(custom-set-face! "@string.regex" [] {:link "regex"})
+(custom-set-face! "@string.escape" [] {:link "escape_char"})
+
+;; @string.special
+
+(custom-set-face! "@character" [] {:link "string"})
+
+;; @character.special
+
+(custom-set-face! "@boolean" [] {:link "keyword"})
+(custom-set-face! "@number" [] {:link "number"})
+(custom-set-face! "@float" [] {:link "number"})
+
+;;; functions
+
+(custom-set-face! "@function" [] {:link "method"})
+(custom-set-face! "@function.builtin" [] {:link "method"})
+
+;; @function.call
+
+(custom-set-face! "@function.macro" [] {:link "method"})
+(custom-set-face! "@method" [] {:link "method"})
+
+;; @method.call
+
+(custom-set-face! "@constructor" [] {:link "type"})
+(custom-set-face! "@parameter" [] {:link "parameter"})
+
+;;; keywords
+
+(custom-set-face! "@keyword" [] {:link "keyword"})
+(custom-set-face! "@keyword.function" [] {:link "keyword"})
+(custom-set-face! "@keyword.operator" [] {:link "operator"})
+
+;; @keyword.return
+
+(custom-set-face! "@conditional" [] {:link "keyword"})
+(custom-set-face! "@repeat" [] {:link "keyword"})
+
+;; @debug
+
+(custom-set-face! "@label" [] {:link "label"})
+(custom-set-face! "@include" [] {:link "preprocessor"})
+(custom-set-face! "@exception" [] {})
+
+;;; types
+
+(custom-set-face! "@type" [] {:link "type"})
+(custom-set-face! "@type.builtin" [] {:link "type"})
+
+;; @type.defintion
+(custom-set-face! "@type.qualifier" [] {:link "keyword"})
+(custom-set-face! "@type.storageclass" [] {:link "keyword"})
+(custom-set-face! "@type.lifetime" [] {:link "lifetime"})
+
+(custom-set-face! "@attribute" [] {:link "decorator"})
+(custom-set-face! "@field" [] {:link "instance_field"})
+(custom-set-face! "@property" [] {:link "instance_field"})
+
+;;; identifiers
+
+(custom-set-face! "@variable" [] {:Link "variable"})
+(custom-set-face! "@variable.builtin" [] {:link "variable"})
+(custom-set-face! "@constant" [] {:link "constant"})
+(custom-set-face! "@constant.builtin" [] {:link "constant"})
+(custom-set-face! "@constant.macro" [] {})
+(custom-set-face! "@namespace" [] {:link "namespace"})
+(custom-set-face! "@symbol" [] {:link "symbol"})
+
+;;; text
+
+(custom-set-face! "@markup" [] {:link "text"})
+(custom-set-face! "@markup.strong" [:bold] {:link "text"})
+(custom-set-face! "@markup.emphasis" [:italic :bold]
+                  {:link "text"})
+(custom-set-face! "@markup.underline" [:underline]
+                  {:link "text"})
+(custom-set-face! "@markup.strike" [:strikethrough]
+                  {:link "text"})
+(custom-set-face! "@markup.title" [] {:link "text_heading"})
+(custom-set-face! "@markup.literal" [] {:link "text"})
+(custom-set-face! "@markup.uri" [:underline] {:link "uri"})
+
+;; @markup.math
+;; @markup.environment
+;; @markup.environment.name
+;; @markup.reference
+(custom-set-face! "@markup.todo" [] {:link "todo"})
+(custom-set-face! "@markup.note" [] {:link "note"})
+(custom-set-face! "@markup.warning" [] {:link "warn"})
+(custom-set-face! "@markup.danger" [] {:link "error"})
+;; @markup.diff.add
+;; @markup.diff.delete
+;;; tags
+
+(custom-set-face! "@tag" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+(custom-set-face! "@tag.attribute" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
+(custom-set-face! "@tag.delimiter" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
+
+;;; Conceal
+;; @conceal
+;;; Spell
+;; @spell
+;; @nospell
+;;; non-standard
+;; @variable.global
+;;; locals
+;; @definition
+;; @definition.constant
+;; @definition.function
+;; @definition.method
+;; @definition.var
+;; @definition.parameter
+;; @definition.macro
+;; @definition.type
+;; @definition.field
+;; @definition.enum
+;; @definition.namespace
+;; @definition.import
+;; @definition.associated
+;; @scope
+
+(custom-set-face! "@reference" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
 
 (custom-set-face! "@lsp.type.")
 (custom-set-face! "@lsp.type.class" [] {:link "Class"})
@@ -297,38 +480,38 @@
 
 ;; regular syntax
 
-(custom-set-face! :Boolean [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Character [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :Comment [:italic]
-                  {:fg oxocharcoal.base03 :bg oxocharcoal.none})
-(custom-set-face! :Conceal [] {:fg oxocharcoal.none :bg oxocharcoal.none})
-(custom-set-face! :Conditional [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Constant [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :Decorator [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
-(custom-set-face! :Define [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Delimeter [] {:fg oxocharcoal.base06 :bg oxocharcoal.none})
-(custom-set-face! :Exception [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Float [] {:link "Number"})
-(custom-set-face! :Function [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! :Identifier [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :Include [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Keyword [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Label [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Number [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-(custom-set-face! :Operator [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :PreProc [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Repeat [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :Special [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :SpecialChar [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :SpecialComment [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! :Statement [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :StorageClass [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :String [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :Structure [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :Tag [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :Todo [:bold] {:fg oxocharcoal.base16 :bg oxocharcoal.none})
-(custom-set-face! :Type [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :Typedef [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+; (custom-set-face! :Boolean [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Character [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+; (custom-set-face! :Comment [:italic]
+;                   {:fg oxocharcoal.base03 :bg oxocharcoal.none})
+; (custom-set-face! :Conceal [] {:fg oxocharcoal.none :bg oxocharcoal.none})
+; (custom-set-face! :Conditional [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Constant [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+; (custom-set-face! :Decorator [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
+; (custom-set-face! :Define [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Delimeter [] {:fg oxocharcoal.base06 :bg oxocharcoal.none})
+; (custom-set-face! :Exception [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Float [] {:link "Number"})
+; (custom-set-face! :Function [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+; (custom-set-face! :Identifier [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+; (custom-set-face! :Include [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Keyword [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Label [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Number [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
+; (custom-set-face! :Operator [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :PreProc [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Repeat [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :Special [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+; (custom-set-face! :SpecialChar [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+; (custom-set-face! :SpecialComment [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+; (custom-set-face! :Statement [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :StorageClass [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
+; (custom-set-face! :String [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+; (custom-set-face! :Structure [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+; (custom-set-face! :Tag [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+; (custom-set-face! :Todo [:bold] {:fg oxocharcoal.base16 :bg oxocharcoal.none})
+; (custom-set-face! :Type [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+; (custom-set-face! :Typedef [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
 
 ;; markdown
 
@@ -367,154 +550,6 @@
 (custom-set-face! :asciidocOneLineTitle [] {:link "markdownH1"})
 (custom-set-face! :asciidocQuotedMonospaced [] {:link "markdownBlockquote"})
 (custom-set-face! :asciidocURL [] {:link "markdownUrl"})
-
-;; treesitter
-;;; misc
-
-(custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@error" [] {:fg oxocharcoal.base11 :bg oxocharcoal.none})
-
-;; @none
-;; @preproc
-;; @define
-
-(custom-set-face! "@operator" [] {:link "Operator"})
-
-;;; punctuation
-
-(custom-set-face! "@punctuation.delimiter" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@punctuation.bracket" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@punctuation.special" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-
-;;; literals
-
-(custom-set-face! "@string" [] {:link "String"})
-(custom-set-face! "@string.regex" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
-(custom-set-face! "@string.escape" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-
-;; @string.special
-
-(custom-set-face! "@character" [] {:link "Character"})
-
-;; @character.special
-
-(custom-set-face! "@boolean" [] {:link "Boolean"})
-(custom-set-face! "@number" [] {:link "Number"})
-(custom-set-face! "@float" [] {:link "Float"})
-
-;;; functions
-
-(custom-set-face! "@function" [:bold]
-                  {:fg oxocharcoal.base12 :bg oxocharcoal.none})
-(custom-set-face! "@function.builtin" [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
-
-;; @function.call
-
-(custom-set-face! "@function.macro" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
-(custom-set-face! "@method" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
-
-;; @method.call
-
-(custom-set-face! "@constructor" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@parameter" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-
-;;; keywords
-
-(custom-set-face! "@keyword" [] {:fg oxocharcoal.base11 :bg oxocharcoal.none})
-(custom-set-face! "@keyword.function" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! "@keyword.operator" [] {:fg oxocharcoal.base05 :bg oxocharcoal.none})
-
-;; @keyword.return
-
-(custom-set-face! "@conditional" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@repeat" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-
-;; @debug
-
-(custom-set-face! "@label" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-(custom-set-face! "@include" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@exception" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-
-;;; types
-
-(custom-set-face! "@type" [] {:link "Type"})
-(custom-set-face! "@type.builtin" [] {:link "Type"})
-
-;; @type.defintion
-;; @type.qualifier
-;; @storageclass
-;; @storageclass.lifetime
-
-(custom-set-face! "@attribute" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-(custom-set-face! "@field" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@property" [] {:fg oxocharcoal.base16 :bg oxocharcoal.none})
-
-;;; identifiers
-
-(custom-set-face! "@variable" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@variable.builtin" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@constant" [:bold] {:fg oxocharcoal.base11 :bg oxocharcoal.none})
-(custom-set-face! "@constant.builtin" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
-(custom-set-face! "@constant.macro" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
-(custom-set-face! "@namespace" [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
-(custom-set-face! "@symbol" [:bold]
-                  {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-
-;;; text
-
-(custom-set-face! "@text" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@text.strong" [] {:fg oxocharcoal.none :bg oxocharcoal.none})
-(custom-set-face! "@text.emphasis" [:bold]
-                  {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! "@text.underline" [:underline]
-                  {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! "@text.strike" [:strikethrough]
-                  {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! "@text.title" [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! "@text.literal" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! "@text.uri" [:underline]
-                  {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-
-;; @text.math
-;; @text.environment
-;; @text.environment.name
-;; @text.reference
-;; @text.todo
-;; @text.note
-;; @text.warning
-;; @text.danger
-;; @text.diff.add
-;; @text.diff.delete
-;;; tags
-
-(custom-set-face! "@tag" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@tag.attribute" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-(custom-set-face! "@tag.delimiter" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-
-;;; Conceal
-;; @conceal
-;;; Spell
-;; @spell
-;; @nospell
-;;; non-standard
-;; @variable.global
-;;; locals
-;; @definition
-;; @definition.constant
-;; @definition.function
-;; @definition.method
-;; @definition.var
-;; @definition.parameter
-;; @definition.macro
-;; @definition.type
-;; @definition.field
-;; @definition.enum
-;; @definition.namespace
-;; @definition.import
-;; @definition.associated
-;; @scope
-
-(custom-set-face! "@reference" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
 
 ;; neovim
 
