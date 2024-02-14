@@ -280,8 +280,8 @@
 (custom-set-face! "@error" [] {:link "error"})
 
 ;; @none
-;; @preproc
-;; @define
+(custom-set-face! "@preproc" [] {:link "preprocessor"})
+(custom-set-face! "@define" [] {:link "preprocessor"})
 
 (custom-set-face! "@operator" [] {:link "operator"})
 
