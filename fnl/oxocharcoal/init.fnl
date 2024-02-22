@@ -187,8 +187,8 @@
 
 ;; search
 
-(custom-set-face! :IncSearch [] {:fg oxocharcoal.white :bg oxocharcoal.color1})
-(custom-set-face! :Search [] {:fg oxocharcoal.white :bg oxocharcoal.color32})
+(custom-set-face! :IncSearch [] {:fg oxocharcoal.black :bg oxocharcoal.color1})
+(custom-set-face! :Search [] {:fg oxocharcoal.white :bg oxocharcoal.colowhiter32})
 
 ;; tabs
 
@@ -620,31 +620,31 @@
                   {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
 (custom-set-face! :CmpItemMenu [:italic]
                   {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
-(custom-set-face! :CmpItemKindInterface [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
+(custom-set-face! :CmpItemKindInterface [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color22})
 (custom-set-face! :CmpItemKindColor [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
-(custom-set-face! :CmpItemKindTypeParameter [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
-(custom-set-face! :CmpItemKindText [] {:fg oxocharcoal.grey01 :bg oxocharcoal.base09})
-(custom-set-face! :CmpItemKindEnum [] {:fg oxocharcoal.grey01 :bg oxocharcoal.base09})
-(custom-set-face! :CmpItemKindKeyword [] {:fg oxocharcoal.grey01 :bg oxocharcoal.base09})
-(custom-set-face! :CmpItemKindConstant [] {:fg oxocharcoal.grey01 :bg oxocharcoal.orange})
-(custom-set-face! :CmpItemKindConstructor [] {:fg oxocharcoal.grey01 :bg oxocharcoal.orange})
+(custom-set-face! :CmpItemKindTypeParameter [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color2})
+(custom-set-face! :CmpItemKindText [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color27})
+(custom-set-face! :CmpItemKindEnum [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color2})
+(custom-set-face! :CmpItemKindKeyword [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color1})
+(custom-set-face! :CmpItemKindConstant [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color3})
+(custom-set-face! :CmpItemKindConstructor [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color2})
 (custom-set-face! :CmpItemKindReference [] {:fg oxocharcoal.grey01 :bg oxocharcoal.orange})
-(custom-set-face! :CmpItemKindFunction [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
-(custom-set-face! :CmpItemKindStruct [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
-(custom-set-face! :CmpItemKindClass [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
-(custom-set-face! :CmpItemKindModule [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
-(custom-set-face! :CmpItemKindOperator [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
-(custom-set-face! :CmpItemKindField [] {:fg oxocharcoal.grey01 :bg oxocharcoal.pink})
-(custom-set-face! :CmpItemKindProperty [] {:fg oxocharcoal.grey01 :bg oxocharcoal.pink})
-(custom-set-face! :CmpItemKindEvent [] {:fg oxocharcoal.grey01 :bg oxocharcoal.pink})
+(custom-set-face! :CmpItemKindFunction [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color16})
+(custom-set-face! :CmpItemKindStruct [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color2})
+(custom-set-face! :CmpItemKindClass [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color2})
+(custom-set-face! :CmpItemKindModule [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color2})
+(custom-set-face! :CmpItemKindOperator [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color14})
+(custom-set-face! :CmpItemKindField [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color18})
+(custom-set-face! :CmpItemKindProperty [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color18})
+(custom-set-face! :CmpItemKindEvent [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color18})
 (custom-set-face! :CmpItemKindUnit [] {:fg oxocharcoal.grey01 :bg oxocharcoal.green})
 (custom-set-face! :CmpItemKindSnippet [] {:fg oxocharcoal.grey01 :bg oxocharcoal.green})
 (custom-set-face! :CmpItemKindFolder [] {:fg oxocharcoal.grey01 :bg oxocharcoal.green})
-(custom-set-face! :CmpItemKindVariable [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lavander})
+(custom-set-face! :CmpItemKindVariable [] {:fg oxocharcoal.grey01 :bg oxocharcoal.white})
 (custom-set-face! :CmpItemKindFile [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lavander})
-(custom-set-face! :CmpItemKindMethod [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lightblue})
+(custom-set-face! :CmpItemKindMethod [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color16})
 (custom-set-face! :CmpItemKindValue [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lightblue})
-(custom-set-face! :CmpItemKindEnumMember [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lightblue})
+(custom-set-face! :CmpItemKindEnumMember [] {:fg oxocharcoal.grey01 :bg oxocharcoal.color3})
 
 ;; nvimtree
 
