@@ -7,7 +7,7 @@
 ;;       `':::''       `'::'-'       `'::.-'       `':..-'       `-...-'
 ;;
 ;;   Colorscheme name:    oxocharcoal themeing system
-;;   Description:         Neovim Colorschemes based on base16 in fennel made with (hs)luv <3
+;;   Description:         Neovim Colorschemes based on orange in fennel made with (hs)luv <3
 ;;   Author:              https://github.com/shaunsingh
 
 (local {: blend-hex} (require :oxocharcoal.colorutils))
@@ -48,96 +48,77 @@
 
 (let! colors_name :oxocharcoal)
 (set! termguicolors)
+(set! vim.g.background :dark)
 
 ;; oxocharcoal palette
 
-(local base00 "#161616")
-(local base06 "#ffffff")
+(local black "#161616")
+(local white "#ffffff")
 (local base09 "#78a9ff")
 
-(local oxocharcoal (or (and (= vim.o.background :dark)
-                          {: base00
-                           :base01 (blend-hex base00 base06 0.085)
-                           :base02 (blend-hex base00 base06 0.18)
-                           :base03 (blend-hex base00 base06 0.3)
-                           :base04 (blend-hex base00 base06 0.82)
-                           :base05 (blend-hex base00 base06 0.95)
-                           : base06
-                           :base07 "#08bdba"
-                           :base08 "#3ddbd9"
-                           : base09
-                           :base10 "#ee5396"
-                           :base11 "#33b1ff"
-                           :base12 "#ff7eb6"
-                           :base13 "#42be65"
-                           :base14 "#be95ff"
-                           :base15 "#82cfff"
-                           :base16 "#ffc37e"
-                           :blend "#131313"
-                           :none :NONE})
-                     {:base00 base06
-                      :base01 (blend-hex base00 base06 0.95)
-                      :base02 (blend-hex base00 base06 0.82)
-                      :base03 base00
-                      :base04 "#37474F"
-                      :base05 "#90A4AE"
-                      :base06 "#525252"
-                      :base07 "#08bdba"
-                      :base08 "#ff7eb6"
-                      :base09 "#ee5396"
-                      :base10 "#FF6F00"
-                      :base11 "#0f62fe"
-                      :base12 "#673AB7"
-                      :base13 "#42be65"
-                      :base14 "#be95ff"
-                      :base15 "#FFAB91"
-                      :base16 :base10
-                      :blend "#FAFAFA"
-                      :none :NONE}))
+(local oxocharcoal {: black
+                     :grey01 (blend-hex black white 0.085)
+                     :grey02 (blend-hex black white 0.18)
+                     :grey03 (blend-hex black white 0.3)
+                     :grey04 (blend-hex black white 0.82)
+                     :grey05 (blend-hex black white 0.95)
+                     : white
+                     :cyan "#08bdba"
+                     :teal "#3ddbd9"
+                     : base09
+                     :fushia "#ee5396"
+                     :blue "#33b1ff"
+                     :pink "#ff7eb6"
+                     :green "#42be65"
+                     :lavander "#be95ff"
+                     :lightblue "#82cfff"
+                     :orange "#ffc37e"
+                     :blend "#131313"
+                     :none :NONE})
 
 ;; terminal
 
-(let! terminal_color_0 oxocharcoal.base01)
-(let! terminal_color_1 oxocharcoal.base11)
-(let! terminal_color_2 oxocharcoal.base14)
-(let! terminal_color_3 oxocharcoal.base13)
+(let! terminal_color_0 oxocharcoal.grey01)
+(let! terminal_color_1 oxocharcoal.blue)
+(let! terminal_color_2 oxocharcoal.lavander)
+(let! terminal_color_3 oxocharcoal.green)
 (let! terminal_color_4 oxocharcoal.base09)
-(let! terminal_color_5 oxocharcoal.base15)
-(let! terminal_color_6 oxocharcoal.base08)
-(let! terminal_color_7 oxocharcoal.base05)
-(let! terminal_color_8 oxocharcoal.base03)
-(let! terminal_color_9 oxocharcoal.base11)
-(let! terminal_color_10 oxocharcoal.base14)
-(let! terminal_color_11 oxocharcoal.base13)
+(let! terminal_color_5 oxocharcoal.lightblue)
+(let! terminal_color_6 oxocharcoal.teal)
+(let! terminal_color_7 oxocharcoal.grey05)
+(let! terminal_color_8 oxocharcoal.grey03)
+(let! terminal_color_9 oxocharcoal.blue)
+(let! terminal_color_10 oxocharcoal.lavander)
+(let! terminal_color_11 oxocharcoal.green)
 (let! terminal_color_12 oxocharcoal.base09)
-(let! terminal_color_13 oxocharcoal.base15)
-(let! terminal_color_14 oxocharcoal.base07)
-(let! terminal_color_15 oxocharcoal.base06)
+(let! terminal_color_13 oxocharcoal.lightblue)
+(let! terminal_color_14 oxocharcoal.cyan)
+(let! terminal_color_15 oxocharcoal.white)
 
 ;; editor
 
-(custom-set-face! :ColorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.base01})
-(custom-set-face! :Cursor [] {:fg oxocharcoal.base00 :bg oxocharcoal.base04})
-(custom-set-face! :CursorLine [] {:fg oxocharcoal.none :bg oxocharcoal.base01})
-(custom-set-face! :CursorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.base01})
-(custom-set-face! :CursorLineNr [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :QuickFixLine [] {:fg oxocharcoal.none :bg oxocharcoal.base01})
-(custom-set-face! :Error [] {:fg oxocharcoal.base10 :bg oxocharcoal.base01})
-(custom-set-face! :LineNr [] {:fg oxocharcoal.base03 :bg oxocharcoal.base00})
-(custom-set-face! :NonText [] {:fg oxocharcoal.base02 :bg oxocharcoal.none})
-(custom-set-face! :Normal [] {:fg oxocharcoal.base04 :bg oxocharcoal.base00})
-(custom-set-face! :Pmenu [] {:fg oxocharcoal.base04 :bg oxocharcoal.base01})
-(custom-set-face! :PmenuSbar [] {:fg oxocharcoal.base04 :bg oxocharcoal.base01})
-(custom-set-face! :PmenuSel [] {:fg oxocharcoal.base08 :bg oxocharcoal.base02})
-(custom-set-face! :PmenuThumb [] {:fg oxocharcoal.base08 :bg oxocharcoal.base02})
-(custom-set-face! :SpecialKey [] {:fg oxocharcoal.base03 :bg oxocharcoal.none})
-(custom-set-face! :Visual [] {:fg oxocharcoal.none :bg oxocharcoal.base02})
-(custom-set-face! :VisualNOS [] {:fg oxocharcoal.none :bg oxocharcoal.base02})
-(custom-set-face! :TooLong [] {:fg oxocharcoal.none :bg oxocharcoal.base02})
-(custom-set-face! :Debug [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :Macro [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
+(custom-set-face! :ColorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
+(custom-set-face! :Cursor [] {:fg oxocharcoal.black :bg oxocharcoal.grey04})
+(custom-set-face! :CursorLine [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
+(custom-set-face! :CursorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
+(custom-set-face! :CursorLineNr [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+(custom-set-face! :QuickFixLine [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
+(custom-set-face! :Error [] {:fg oxocharcoal.fushia :bg oxocharcoal.grey01})
+(custom-set-face! :LineNr [] {:fg oxocharcoal.grey03 :bg oxocharcoal.black})
+(custom-set-face! :NonText [] {:fg oxocharcoal.grey02 :bg oxocharcoal.none})
+(custom-set-face! :Normal [] {:fg oxocharcoal.grey04 :bg oxocharcoal.black})
+(custom-set-face! :Pmenu [] {:fg oxocharcoal.grey04 :bg oxocharcoal.grey01})
+(custom-set-face! :PmenuSbar [] {:fg oxocharcoal.grey04 :bg oxocharcoal.grey01})
+(custom-set-face! :PmenuSel [] {:fg oxocharcoal.teal :bg oxocharcoal.grey02})
+(custom-set-face! :PmenuThumb [] {:fg oxocharcoal.teal :bg oxocharcoal.grey02})
+(custom-set-face! :SpecialKey [] {:fg oxocharcoal.grey03 :bg oxocharcoal.none})
+(custom-set-face! :Visual [] {:fg oxocharcoal.none :bg oxocharcoal.grey02})
+(custom-set-face! :VisualNOS [] {:fg oxocharcoal.none :bg oxocharcoal.grey02})
+(custom-set-face! :TooLong [] {:fg oxocharcoal.none :bg oxocharcoal.grey02})
+(custom-set-face! :Debug [] {:fg oxocharcoal.green :bg oxocharcoal.none})
+(custom-set-face! :Macro [] {:fg oxocharcoal.cyan :bg oxocharcoal.none})
 (custom-set-face! :MatchParen [:underline]
-                  {:fg oxocharcoal.none :bg oxocharcoal.base02})
+                  {:fg oxocharcoal.none :bg oxocharcoal.grey02})
 (custom-set-face! :Bold [:bold] {:fg oxocharcoal.none :bg oxocharcoal.none})
 (custom-set-face! :Italic [:italic] {:fg oxocharcoal.none :bg oxocharcoal.none})
 (custom-set-face! :Underlined [:underline]
@@ -145,42 +126,42 @@
 
 ;; diagnostics
 
-(custom-set-face! :DiagnosticWarn [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :DiagnosticError [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
+(custom-set-face! :DiagnosticWarn [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+(custom-set-face! :DiagnosticError [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
 (custom-set-face! :DiagnosticInfo [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :DiagnosticHint [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+(custom-set-face! :DiagnosticHint [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
 (custom-set-face! :DiagnosticUnderlineWarn [:undercurl]
-                  {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.lavander :bg oxocharcoal.none})
 (custom-set-face! :DiagnosticUnderlineError [:undercurl]
-                  {:fg oxocharcoal.base10 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.fushia :bg oxocharcoal.none})
 (custom-set-face! :DiagnosticUnderlineInfo [:undercurl]
-                  {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
 (custom-set-face! :DiagnosticUnderlineHint [:undercurl]
-                  {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
 
 ;; health
-(custom-set-face! :HealthError [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! :HealthWarning [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :HealthSuccess [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+(custom-set-face! :HealthError [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
+(custom-set-face! :HealthWarning [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+(custom-set-face! :HealthSuccess [] {:fg oxocharcoal.green :bg oxocharcoal.none})
 
 ;; ledger
 
 ; (custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@text.literal.commodity" [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+(custom-set-face! "@text.literal.commodity" [] {:fg oxocharcoal.green :bg oxocharcoal.none})
 (custom-set-face! "@number" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@number.date" [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! "@number.date.effective" [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+(custom-set-face! "@number.date" [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
+(custom-set-face! "@number.date.effective" [] {:fg oxocharcoal.green :bg oxocharcoal.none})
 (custom-set-face! "@number.interval" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@number.status" [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
-(custom-set-face! "@number.quantity" [] {:fg oxocharcoal.base11 :bg oxocharcoal.none})
-(custom-set-face! "@number.quantity.negative" [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
+(custom-set-face! "@number.status" [] {:fg oxocharcoal.pink :bg oxocharcoal.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocharcoal.blue :bg oxocharcoal.none})
+(custom-set-face! "@number.quantity.negative" [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
 
 ;; lsp
 
-(custom-set-face! :LspReferenceText [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
-(custom-set-face! :LspReferenceread [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
-(custom-set-face! :LspReferenceWrite [] {:fg oxocharcoal.none :bg oxocharcoal.base03})
-(custom-set-face! :LspSignatureActiveParameter [:bold] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+(custom-set-face! :LspReferenceText [] {:fg oxocharcoal.none :bg oxocharcoal.grey03})
+(custom-set-face! :LspReferenceread [] {:fg oxocharcoal.none :bg oxocharcoal.grey03})
+(custom-set-face! :LspReferenceWrite [] {:fg oxocharcoal.none :bg oxocharcoal.grey03})
+(custom-set-face! :LspSignatureActiveParameter [:bold] {:fg oxocharcoal.teal :bg oxocharcoal.none})
 
 ;; semantic classes mapping
 (custom-set-face! "keyword" [] {:fg "#94C4FF" :bg oxocharcoal.none})
@@ -391,8 +372,8 @@
 ;;; tags
 
 (custom-set-face! "@tag" [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! "@tag.attribute" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-(custom-set-face! "@tag.delimiter" [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
+(custom-set-face! "@tag.attribute" [] {:fg oxocharcoal.lightblue :bg oxocharcoal.none})
+(custom-set-face! "@tag.delimiter" [] {:fg oxocharcoal.lightblue :bg oxocharcoal.none})
 
 ;;; Conceal
 ;; @conceal
@@ -416,43 +397,43 @@
 ;; @definition.associated
 ;; @scope
 
-(custom-set-face! "@reference" [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+(custom-set-face! "@reference" [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
 
 ;; gutter
 
-(custom-set-face! :Folded [] {:fg oxocharcoal.base02 :bg oxocharcoal.base01})
-(custom-set-face! :FoldColumn [] {:fg oxocharcoal.base01 :bg oxocharcoal.base00})
-(custom-set-face! :SignColumn [] {:fg oxocharcoal.base01 :bg oxocharcoal.base00})
+(custom-set-face! :Folded [] {:fg oxocharcoal.grey02 :bg oxocharcoal.grey01})
+(custom-set-face! :FoldColumn [] {:fg oxocharcoal.grey01 :bg oxocharcoal.black})
+(custom-set-face! :SignColumn [] {:fg oxocharcoal.grey01 :bg oxocharcoal.black})
 
 ;; navigation
 
-(custom-set-face! :Directory [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+(custom-set-face! :Directory [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
 
 ;; prompts
 
-(custom-set-face! :EndOfBuffer [] {:fg oxocharcoal.base01 :bg oxocharcoal.none})
-(custom-set-face! :ErrorMsg [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! :ModeMsg [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :MoreMsg [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! :Question [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :Substitute [] {:fg oxocharcoal.base01 :bg oxocharcoal.base08})
-(custom-set-face! :WarningMsg [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :WildMenu [] {:fg oxocharcoal.base08 :bg oxocharcoal.base01})
+(custom-set-face! :EndOfBuffer [] {:fg oxocharcoal.grey01 :bg oxocharcoal.none})
+(custom-set-face! :ErrorMsg [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
+(custom-set-face! :ModeMsg [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+(custom-set-face! :MoreMsg [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
+(custom-set-face! :Question [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+(custom-set-face! :Substitute [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
+(custom-set-face! :WarningMsg [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+(custom-set-face! :WildMenu [] {:fg oxocharcoal.teal :bg oxocharcoal.grey01})
 
 ;; vimhelp
 
 (custom-set-face! :helpHyperTextJump []
-                  {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.teal :bg oxocharcoal.none})
 
 (custom-set-face! :helpSpecial [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :helpHeadline [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! :helpHeader [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
+(custom-set-face! :helpHeadline [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
+(custom-set-face! :helpHeader [] {:fg oxocharcoal.lightblue :bg oxocharcoal.none})
 
 ;; diff
 
-(custom-set-face! :DiffAdded [] {:fg oxocharcoal.base07 :bg oxocharcoal.none})
+(custom-set-face! :DiffAdded [] {:fg oxocharcoal.cyan :bg oxocharcoal.none})
 (custom-set-face! :DiffChanged [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :DiffRemoved [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
+(custom-set-face! :DiffRemoved [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
 (custom-set-face! :DiffAdd [] {:bg "#122f2f" :fg oxocharcoal.none})
 (custom-set-face! :DiffChange [] {:bg "#222a39" :fg oxocharcoal.none})
 (custom-set-face! :DiffText [] {:bg "#2f3f5c" :fg oxocharcoal.none})
@@ -460,8 +441,8 @@
 
 ;; search
 
-(custom-set-face! :IncSearch [] {:fg oxocharcoal.base06 :bg oxocharcoal.base10})
-(custom-set-face! :Search [] {:fg oxocharcoal.base01 :bg oxocharcoal.base08})
+(custom-set-face! :IncSearch [] {:fg oxocharcoal.white :bg oxocharcoal.fushia})
+(custom-set-face! :Search [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
 
 ;; tabs
 
@@ -471,54 +452,54 @@
 
 ;; window
 
-(custom-set-face! :Title [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :VertSplit [] {:fg oxocharcoal.base01 :bg oxocharcoal.base00})
+(custom-set-face! :Title [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+(custom-set-face! :VertSplit [] {:fg oxocharcoal.grey01 :bg oxocharcoal.black})
 
 ;; regular syntax
 
 ; (custom-set-face! :Boolean [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-; (custom-set-face! :Character [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+; (custom-set-face! :Character [] {:fg oxocharcoal.green :bg oxocharcoal.none})
 ; (custom-set-face! :Comment [:italic]
-;                   {:fg oxocharcoal.base03 :bg oxocharcoal.none})
+;                   {:fg oxocharcoal.grey03 :bg oxocharcoal.none})
 ; (custom-set-face! :Conceal [] {:fg oxocharcoal.none :bg oxocharcoal.none})
 ; (custom-set-face! :Conditional [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-; (custom-set-face! :Constant [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-; (custom-set-face! :Decorator [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
+; (custom-set-face! :Constant [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+; (custom-set-face! :Decorator [] {:fg oxocharcoal.pink :bg oxocharcoal.none})
 ; (custom-set-face! :Define [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-; (custom-set-face! :Delimeter [] {:fg oxocharcoal.base06 :bg oxocharcoal.none})
+; (custom-set-face! :Delimeter [] {:fg oxocharcoal.white :bg oxocharcoal.none})
 ; (custom-set-face! :Exception [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 ; (custom-set-face! :Float [] {:link "Number"})
-; (custom-set-face! :Function [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-; (custom-set-face! :Identifier [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+; (custom-set-face! :Function [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
+; (custom-set-face! :Identifier [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
 ; (custom-set-face! :Include [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 ; (custom-set-face! :Keyword [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 ; (custom-set-face! :Label [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-; (custom-set-face! :Number [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
+; (custom-set-face! :Number [] {:fg oxocharcoal.lightblue :bg oxocharcoal.none})
 ; (custom-set-face! :Operator [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 ; (custom-set-face! :PreProc [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 ; (custom-set-face! :Repeat [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-; (custom-set-face! :Special [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-; (custom-set-face! :SpecialChar [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-; (custom-set-face! :SpecialComment [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+; (custom-set-face! :Special [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+; (custom-set-face! :SpecialChar [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+; (custom-set-face! :SpecialComment [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
 ; (custom-set-face! :Statement [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
 ; (custom-set-face! :StorageClass [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-; (custom-set-face! :String [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-; (custom-set-face! :Structure [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-; (custom-set-face! :Tag [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-; (custom-set-face! :Todo [:bold] {:fg oxocharcoal.base16 :bg oxocharcoal.none})
-; (custom-set-face! :Type [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-; (custom-set-face! :Typedef [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+; (custom-set-face! :String [] {:fg oxocharcoal.green :bg oxocharcoal.none})
+; (custom-set-face! :Structure [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+; (custom-set-face! :Tag [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+; (custom-set-face! :Todo [:bold] {:fg oxocharcoal.orange :bg oxocharcoal.none})
+; (custom-set-face! :Type [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+; (custom-set-face! :Typedef [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
 
 ;; markdown
 
 (custom-set-face! :markdownBlockquote []
-                  {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.teal :bg oxocharcoal.none})
 (custom-set-face! :markdownBold [] {:link "Bold"})
 (custom-set-face! :markdownItalic [] {:link "Italic"})
 (custom-set-face! :markdownBoldItalic [:bold :italic]
                   {:fg oxocharcoal.none :bg oxocharcoal.none})
 (custom-set-face! :markdownRule [] {:link "Comment"})
-(custom-set-face! :markdownH1 [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
+(custom-set-face! :markdownH1 [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
 (custom-set-face! :markdownH2 [] {:link "markdownH1"})
 (custom-set-face! :markdownH3 [] {:link "markdownH1"})
 (custom-set-face! :markdownH4 [] {:link "markdownH1"})
@@ -527,19 +508,19 @@
 (custom-set-face! :markdownHeadingDelimiter [] {:link "markdownH1"})
 (custom-set-face! :markdownHeadingRule [] {:link "markdownH1"})
 (custom-set-face! :markdownUrl [:underline]
-                  {:fg oxocharcoal.base14 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.lavander :bg oxocharcoal.none})
 (custom-set-face! :markdownCode [] {:link "String"})
 (custom-set-face! :markdownCodeBlock [] {:link "markdownCode"})
 (custom-set-face! :markdownCodeDelimiter [] {:link "markdownCode"})
 (custom-set-face! :markdownUrl [] {:link "String"})
 (custom-set-face! :markdownListMarker []
-                  {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.teal :bg oxocharcoal.none})
 (custom-set-face! :markdownOrderedListMarker []
-                  {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.teal :bg oxocharcoal.none})
 
 ;; asciidoc
 
-(custom-set-face! :asciidocAttributeEntry [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
+(custom-set-face! :asciidocAttributeEntry [] {:fg oxocharcoal.lightblue :bg oxocharcoal.none})
 (custom-set-face! :asciidocAttributeList [] {:link "asciidocAttributeEntry"})
 (custom-set-face! :asciidocAttributeRef [] {:link "asciidocAttributeEntry"})
 (custom-set-face! :asciidocHLabel [] {:link "markdownH1"})
@@ -549,138 +530,138 @@
 
 ;; neovim
 
-(custom-set-face! :NvimInternalError [] {:fg oxocharcoal.base00 :bg oxocharcoal.base08})
-(custom-set-face! :NormalFloat [] {:fg oxocharcoal.base05 :bg oxocharcoal.blend})
+(custom-set-face! :NvimInternalError [] {:fg oxocharcoal.black :bg oxocharcoal.teal})
+(custom-set-face! :NormalFloat [] {:fg oxocharcoal.grey05 :bg oxocharcoal.blend})
 (custom-set-face! :FloatBorder [] {:fg oxocharcoal.blend :bg oxocharcoal.blend})
-(custom-set-face! :NormalNC [] {:fg oxocharcoal.base05 :bg oxocharcoal.base00})
-(custom-set-face! :TermCursor [] {:fg oxocharcoal.base00 :bg oxocharcoal.base04})
-(custom-set-face! :TermCursorNC [] {:fg oxocharcoal.base00 :bg oxocharcoal.base04})
+(custom-set-face! :NormalNC [] {:fg oxocharcoal.grey05 :bg oxocharcoal.black})
+(custom-set-face! :TermCursor [] {:fg oxocharcoal.black :bg oxocharcoal.grey04})
+(custom-set-face! :TermCursorNC [] {:fg oxocharcoal.black :bg oxocharcoal.grey04})
 
 ;; statusline/winbar
 
-(custom-set-face! :StatusLine [] {:fg oxocharcoal.base04 :bg oxocharcoal.base00})
-(custom-set-face! :StatusLineNC [] {:fg oxocharcoal.base04 :bg oxocharcoal.base01})
-(custom-set-face! :StatusReplace [] {:fg oxocharcoal.base00 :bg oxocharcoal.base08})
-(custom-set-face! :StatusInsert [] {:fg oxocharcoal.base00 :bg oxocharcoal.base12})
-(custom-set-face! :StatusVisual [] {:fg oxocharcoal.base00 :bg oxocharcoal.base14})
-(custom-set-face! :StatusTerminal [] {:fg oxocharcoal.base00 :bg oxocharcoal.base11})
-(custom-set-face! :StatusNormal [] {:fg oxocharcoal.base00 :bg oxocharcoal.base15})
-(custom-set-face! :StatusCommand [] {:fg oxocharcoal.base00 :bg oxocharcoal.base13})
+(custom-set-face! :StatusLine [] {:fg oxocharcoal.grey04 :bg oxocharcoal.black})
+(custom-set-face! :StatusLineNC [] {:fg oxocharcoal.grey04 :bg oxocharcoal.grey01})
+(custom-set-face! :StatusReplace [] {:fg oxocharcoal.black :bg oxocharcoal.teal})
+(custom-set-face! :StatusInsert [] {:fg oxocharcoal.black :bg oxocharcoal.pink})
+(custom-set-face! :StatusVisual [] {:fg oxocharcoal.black :bg oxocharcoal.lavander})
+(custom-set-face! :StatusTerminal [] {:fg oxocharcoal.black :bg oxocharcoal.blue})
+(custom-set-face! :StatusNormal [] {:fg oxocharcoal.black :bg oxocharcoal.lightblue})
+(custom-set-face! :StatusCommand [] {:fg oxocharcoal.black :bg oxocharcoal.green})
 (custom-set-face! :StatusLineDiagnosticWarn [:bold]
-                  {:fg oxocharcoal.base14 :bg oxocharcoal.base00})
+                  {:fg oxocharcoal.lavander :bg oxocharcoal.black})
 (custom-set-face! :StatusLineDiagnosticError [:bold]
-                  {:fg oxocharcoal.base10 :bg oxocharcoal.base00})
+                  {:fg oxocharcoal.fushia :bg oxocharcoal.black})
 
 ;; telescope
 
 (custom-set-face! :TelescopeBorder [] {:fg oxocharcoal.blend :bg oxocharcoal.blend})
-(custom-set-face! :TelescopePromptBorder [] {:fg oxocharcoal.base02 :bg oxocharcoal.base02})
-(custom-set-face! :TelescopePromptNormal [] {:fg oxocharcoal.base05 :bg oxocharcoal.base02})
-(custom-set-face! :TelescopePromptPrefix [] {:fg oxocharcoal.base08 :bg oxocharcoal.base02})
+(custom-set-face! :TelescopePromptBorder [] {:fg oxocharcoal.grey02 :bg oxocharcoal.grey02})
+(custom-set-face! :TelescopePromptNormal [] {:fg oxocharcoal.grey05 :bg oxocharcoal.grey02})
+(custom-set-face! :TelescopePromptPrefix [] {:fg oxocharcoal.teal :bg oxocharcoal.grey02})
 (custom-set-face! :TelescopeNormal [] {:fg oxocharcoal.none :bg oxocharcoal.blend})
-(custom-set-face! :TelescopePreviewTitle [] {:fg oxocharcoal.base02 :bg oxocharcoal.base12})
-(custom-set-face! :TelescopePromptTitle [] {:fg oxocharcoal.base02 :bg oxocharcoal.base11})
+(custom-set-face! :TelescopePreviewTitle [] {:fg oxocharcoal.grey02 :bg oxocharcoal.pink})
+(custom-set-face! :TelescopePromptTitle [] {:fg oxocharcoal.grey02 :bg oxocharcoal.blue})
 (custom-set-face! :TelescopeResultsTitle [] {:fg oxocharcoal.blend :bg oxocharcoal.blend})
-(custom-set-face! :TelescopeSelection [] {:fg oxocharcoal.none :bg oxocharcoal.base02})
-(custom-set-face! :TelescopePreviewLine [] {:fg oxocharcoal.none :bg oxocharcoal.base01})
-(custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+(custom-set-face! :TelescopeSelection [] {:fg oxocharcoal.none :bg oxocharcoal.grey02})
+(custom-set-face! :TelescopePreviewLine [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
+(custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocharcoal.teal :bg oxocharcoal.none})
 
 ;; notify
 
-(custom-set-face! :NotifyERRORBorder [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! :NotifyWARNBorder [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :NotifyINFOBorder [] {:fg oxocharcoal.base05 :bg oxocharcoal.none})
-(custom-set-face! :NotifyDEBUGBorder [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :NotifyTRACEBorder [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :NotifyERRORIcon [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! :NotifyWARNIcon [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :NotifyINFOIcon [] {:fg oxocharcoal.base05 :bg oxocharcoal.none})
-(custom-set-face! :NotifyDEBUGIcon [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :NotifyTRACEIcon [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :NotifyERRORTitle [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
-(custom-set-face! :NotifyWARNTitle [] {:fg oxocharcoal.base14 :bg oxocharcoal.none})
-(custom-set-face! :NotifyINFOTitle [] {:fg oxocharcoal.base05 :bg oxocharcoal.none})
-(custom-set-face! :NotifyDEBUGTitle [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
-(custom-set-face! :NotifyTRACETitle [] {:fg oxocharcoal.base13 :bg oxocharcoal.none})
+(custom-set-face! :NotifyERRORBorder [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
+(custom-set-face! :NotifyWARNBorder [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+(custom-set-face! :NotifyINFOBorder [] {:fg oxocharcoal.grey05 :bg oxocharcoal.none})
+(custom-set-face! :NotifyDEBUGBorder [] {:fg oxocharcoal.green :bg oxocharcoal.none})
+(custom-set-face! :NotifyTRACEBorder [] {:fg oxocharcoal.green :bg oxocharcoal.none})
+(custom-set-face! :NotifyERRORIcon [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
+(custom-set-face! :NotifyWARNIcon [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+(custom-set-face! :NotifyINFOIcon [] {:fg oxocharcoal.grey05 :bg oxocharcoal.none})
+(custom-set-face! :NotifyDEBUGIcon [] {:fg oxocharcoal.green :bg oxocharcoal.none})
+(custom-set-face! :NotifyTRACEIcon [] {:fg oxocharcoal.green :bg oxocharcoal.none})
+(custom-set-face! :NotifyERRORTitle [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
+(custom-set-face! :NotifyWARNTitle [] {:fg oxocharcoal.lavander :bg oxocharcoal.none})
+(custom-set-face! :NotifyINFOTitle [] {:fg oxocharcoal.grey05 :bg oxocharcoal.none})
+(custom-set-face! :NotifyDEBUGTitle [] {:fg oxocharcoal.green :bg oxocharcoal.none})
+(custom-set-face! :NotifyTRACETitle [] {:fg oxocharcoal.green :bg oxocharcoal.none})
 
 ;; cmp
 
 (custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocharcoal.none})
 (custom-set-face! :CmpItemAbbrMatch [:bold]
-                  {:fg oxocharcoal.base05 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.grey05 :bg oxocharcoal.none})
 (custom-set-face! :CmpItemAbbrMatchFuzzy [:bold]
-                  {:fg oxocharcoal.base04 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
 (custom-set-face! :CmpItemMenu [:italic]
-                  {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :CmpItemKindInterface [] {:fg oxocharcoal.base01 :bg oxocharcoal.base08})
-(custom-set-face! :CmpItemKindColor [] {:fg oxocharcoal.base01 :bg oxocharcoal.base08})
-(custom-set-face! :CmpItemKindTypeParameter [] {:fg oxocharcoal.base01 :bg oxocharcoal.base08})
-(custom-set-face! :CmpItemKindText [] {:fg oxocharcoal.base01 :bg oxocharcoal.base09})
-(custom-set-face! :CmpItemKindEnum [] {:fg oxocharcoal.base01 :bg oxocharcoal.base09})
-(custom-set-face! :CmpItemKindKeyword [] {:fg oxocharcoal.base01 :bg oxocharcoal.base09})
-(custom-set-face! :CmpItemKindConstant [] {:fg oxocharcoal.base01 :bg oxocharcoal.base16})
-(custom-set-face! :CmpItemKindConstructor [] {:fg oxocharcoal.base01 :bg oxocharcoal.base16})
-(custom-set-face! :CmpItemKindReference [] {:fg oxocharcoal.base01 :bg oxocharcoal.base16})
-(custom-set-face! :CmpItemKindFunction [] {:fg oxocharcoal.base01 :bg oxocharcoal.base11})
-(custom-set-face! :CmpItemKindStruct [] {:fg oxocharcoal.base01 :bg oxocharcoal.base11})
-(custom-set-face! :CmpItemKindClass [] {:fg oxocharcoal.base01 :bg oxocharcoal.base11})
-(custom-set-face! :CmpItemKindModule [] {:fg oxocharcoal.base01 :bg oxocharcoal.base11})
-(custom-set-face! :CmpItemKindOperator [] {:fg oxocharcoal.base01 :bg oxocharcoal.base11})
-(custom-set-face! :CmpItemKindField [] {:fg oxocharcoal.base01 :bg oxocharcoal.base12})
-(custom-set-face! :CmpItemKindProperty [] {:fg oxocharcoal.base01 :bg oxocharcoal.base12})
-(custom-set-face! :CmpItemKindEvent [] {:fg oxocharcoal.base01 :bg oxocharcoal.base12})
-(custom-set-face! :CmpItemKindUnit [] {:fg oxocharcoal.base01 :bg oxocharcoal.base13})
-(custom-set-face! :CmpItemKindSnippet [] {:fg oxocharcoal.base01 :bg oxocharcoal.base13})
-(custom-set-face! :CmpItemKindFolder [] {:fg oxocharcoal.base01 :bg oxocharcoal.base13})
-(custom-set-face! :CmpItemKindVariable [] {:fg oxocharcoal.base01 :bg oxocharcoal.base14})
-(custom-set-face! :CmpItemKindFile [] {:fg oxocharcoal.base01 :bg oxocharcoal.base14})
-(custom-set-face! :CmpItemKindMethod [] {:fg oxocharcoal.base01 :bg oxocharcoal.base15})
-(custom-set-face! :CmpItemKindValue [] {:fg oxocharcoal.base01 :bg oxocharcoal.base15})
-(custom-set-face! :CmpItemKindEnumMember [] {:fg oxocharcoal.base01 :bg oxocharcoal.base15})
+                  {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+(custom-set-face! :CmpItemKindInterface [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
+(custom-set-face! :CmpItemKindColor [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
+(custom-set-face! :CmpItemKindTypeParameter [] {:fg oxocharcoal.grey01 :bg oxocharcoal.teal})
+(custom-set-face! :CmpItemKindText [] {:fg oxocharcoal.grey01 :bg oxocharcoal.base09})
+(custom-set-face! :CmpItemKindEnum [] {:fg oxocharcoal.grey01 :bg oxocharcoal.base09})
+(custom-set-face! :CmpItemKindKeyword [] {:fg oxocharcoal.grey01 :bg oxocharcoal.base09})
+(custom-set-face! :CmpItemKindConstant [] {:fg oxocharcoal.grey01 :bg oxocharcoal.orange})
+(custom-set-face! :CmpItemKindConstructor [] {:fg oxocharcoal.grey01 :bg oxocharcoal.orange})
+(custom-set-face! :CmpItemKindReference [] {:fg oxocharcoal.grey01 :bg oxocharcoal.orange})
+(custom-set-face! :CmpItemKindFunction [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
+(custom-set-face! :CmpItemKindStruct [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
+(custom-set-face! :CmpItemKindClass [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
+(custom-set-face! :CmpItemKindModule [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
+(custom-set-face! :CmpItemKindOperator [] {:fg oxocharcoal.grey01 :bg oxocharcoal.blue})
+(custom-set-face! :CmpItemKindField [] {:fg oxocharcoal.grey01 :bg oxocharcoal.pink})
+(custom-set-face! :CmpItemKindProperty [] {:fg oxocharcoal.grey01 :bg oxocharcoal.pink})
+(custom-set-face! :CmpItemKindEvent [] {:fg oxocharcoal.grey01 :bg oxocharcoal.pink})
+(custom-set-face! :CmpItemKindUnit [] {:fg oxocharcoal.grey01 :bg oxocharcoal.green})
+(custom-set-face! :CmpItemKindSnippet [] {:fg oxocharcoal.grey01 :bg oxocharcoal.green})
+(custom-set-face! :CmpItemKindFolder [] {:fg oxocharcoal.grey01 :bg oxocharcoal.green})
+(custom-set-face! :CmpItemKindVariable [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lavander})
+(custom-set-face! :CmpItemKindFile [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lavander})
+(custom-set-face! :CmpItemKindMethod [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lightblue})
+(custom-set-face! :CmpItemKindValue [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lightblue})
+(custom-set-face! :CmpItemKindEnumMember [] {:fg oxocharcoal.grey01 :bg oxocharcoal.lightblue})
 
 ;; nvimtree
 
-(custom-set-face! :NvimTreeImageFile [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
-(custom-set-face! :NvimTreeFolderIcon [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
-(custom-set-face! :NvimTreeWinSeparator [] {:fg oxocharcoal.base00 :bg oxocharcoal.base00})
+(custom-set-face! :NvimTreeImageFile [] {:fg oxocharcoal.pink :bg oxocharcoal.none})
+(custom-set-face! :NvimTreeFolderIcon [] {:fg oxocharcoal.pink :bg oxocharcoal.none})
+(custom-set-face! :NvimTreeWinSeparator [] {:fg oxocharcoal.black :bg oxocharcoal.black})
 (custom-set-face! :NvimTreeFolderName [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :NvimTreeIndentMarker [] {:fg oxocharcoal.base02 :bg oxocharcoal.none})
-(custom-set-face! :NvimTreeEmptyFolderName [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-(custom-set-face! :NvimTreeOpenedFolderName [] {:fg oxocharcoal.base15 :bg oxocharcoal.none})
-(custom-set-face! :NvimTreeNormal [] {:fg oxocharcoal.base04 :bg oxocharcoal.base00})
+(custom-set-face! :NvimTreeIndentMarker [] {:fg oxocharcoal.grey02 :bg oxocharcoal.none})
+(custom-set-face! :NvimTreeEmptyFolderName [] {:fg oxocharcoal.lightblue :bg oxocharcoal.none})
+(custom-set-face! :NvimTreeOpenedFolderName [] {:fg oxocharcoal.lightblue :bg oxocharcoal.none})
+(custom-set-face! :NvimTreeNormal [] {:fg oxocharcoal.grey04 :bg oxocharcoal.black})
 
 ;; neogit
 
-(custom-set-face! :NeogitBranch [] {:fg oxocharcoal.base16 :bg oxocharcoal.none})
+(custom-set-face! :NeogitBranch [] {:fg oxocharcoal.orange :bg oxocharcoal.none})
 (custom-set-face! :NeogitRemote [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :NeogitHunkHeader [] {:fg oxocharcoal.base04 :bg oxocharcoal.base02})
-(custom-set-face! :NeogitHunkHeaderHighlight [] {:fg oxocharcoal.base04 :bg oxocharcoal.base03})
+(custom-set-face! :NeogitHunkHeader [] {:fg oxocharcoal.grey04 :bg oxocharcoal.grey02})
+(custom-set-face! :NeogitHunkHeaderHighlight [] {:fg oxocharcoal.grey04 :bg oxocharcoal.grey03})
 
 ;; hydra
 
-(custom-set-face! :HydraRed [] {:fg oxocharcoal.base12 :bg oxocharcoal.none})
+(custom-set-face! :HydraRed [] {:fg oxocharcoal.pink :bg oxocharcoal.none})
 (custom-set-face! :HydraBlue [] {:fg oxocharcoal.base09 :bg oxocharcoal.none})
-(custom-set-face! :HydraAmaranth [] {:fg oxocharcoal.base10 :bg oxocharcoal.none})
-(custom-set-face! :HydraTeal [] {:fg oxocharcoal.base08 :bg oxocharcoal.none})
+(custom-set-face! :HydraAmaranth [] {:fg oxocharcoal.fushia :bg oxocharcoal.none})
+(custom-set-face! :HydraTeal [] {:fg oxocharcoal.teal :bg oxocharcoal.none})
 (custom-set-face! :HydraHint [] {:fg oxocharcoal.none :bg oxocharcoal.blend})
 
 ;; alpha
 
-(custom-set-face! :alpha1 [] {:fg oxocharcoal.base03 :bg oxocharcoal.none})
-(custom-set-face! :alpha2 [] {:fg oxocharcoal.base04 :bg oxocharcoal.none})
-(custom-set-face! :alpha3 [] {:fg oxocharcoal.base03 :bg oxocharcoal.none})
+(custom-set-face! :alpha1 [] {:fg oxocharcoal.grey03 :bg oxocharcoal.none})
+(custom-set-face! :alpha2 [] {:fg oxocharcoal.grey04 :bg oxocharcoal.none})
+(custom-set-face! :alpha3 [] {:fg oxocharcoal.grey03 :bg oxocharcoal.none})
 
 ;; headlines.nvim
 
-(custom-set-face! :CodeBlock [] {:fg oxocharcoal.none :bg oxocharcoal.base01})
+(custom-set-face! :CodeBlock [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
 
 ;; nvim-bufferline
 
 (custom-set-face! :BufferLineDiagnostic [:bold]
-                  {:fg oxocharcoal.base10 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.fushia :bg oxocharcoal.none})
 
 (custom-set-face! :BufferLineDiagnosticVisible [:bold]
-                  {:fg oxocharcoal.base10 :bg oxocharcoal.none})
+                  {:fg oxocharcoal.fushia :bg oxocharcoal.none})
 
 ;; preservim/vim-markdown
 
