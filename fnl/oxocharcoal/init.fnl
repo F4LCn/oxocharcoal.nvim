@@ -55,12 +55,15 @@
 
 ;; oxocharcoal palette
 
+(local abyss "#000000")
 (local black "#0E0E0E")
 (local white "#ffffff")
 (local blend "#080808")
 (local base09 "#78a9ff")
 
-(local oxocharcoal {: black
+(local oxocharcoal {
+                     : abyss
+                     : black
                      :grey01 (blend-hex black white 0.085)
                      :grey02 (blend-hex black white 0.18)
                      :grey03 (blend-hex black white 0.3)
@@ -174,6 +177,9 @@
 (custom-set-face! :Substitute [] {:fg oxocharcoal.color24 :bg oxocharcoal.color31})
 (custom-set-face! :WarningMsg [] {:fg oxocharcoal.color9 :bg oxocharcoal.none})
 (custom-set-face! :WildMenu [] {:fg oxocharcoal.teal :bg oxocharcoal.grey01})
+(custom-set-face! :GitSignsAdd [] {:fg oxocharcoal.color29 :bg oxocharcoal.none})
+(custom-set-face! :GitSignsChange [] {:fg oxocharcoal.color3 :bg oxocharcoal.none})
+(custom-set-face! :GitSignsDelete [] {:fg oxocharcoal.color10 :bg oxocharcoal.none})
 
 ;; diff
 
@@ -185,10 +191,34 @@
 (custom-set-face! :DiffText [] {:bg (darken-hex oxocharcoal.color3 0.6) :fg oxocharcoal.none})
 (custom-set-face! :DiffDelete [] {:bg (darken-hex oxocharcoal.color10 0.6) :fg oxocharcoal.none})
 
+;; todo
+black
+(custom-set-face! :TodoBgFIX [] {:bg oxocharcoal.color10 :fg oxocharcoal.black})
+(custom-set-face! :TodoFgFIX [] {:bg oxocharcoal.none :fg oxocharcoal.color10})
+
+(custom-set-face! :TodoBgHACK [] {:bg oxocharcoal.color9 :fg oxocharcoal.black})
+(custom-set-face! :TodoFgHACK [] {:bg oxocharcoal.none :fg oxocharcoal.color9})
+
+(custom-set-face! :TodoBgNOTE [] {:bg oxocharcoal.color28 :fg oxocharcoal.black})
+(custom-set-face! :TodoFgNOTE [] {:bg oxocharcoal.none :fg oxocharcoal.color28})
+
+(custom-set-face! :TodoBgPERF [] {:bg oxocharcoal.color28 :fg oxocharcoal.black})
+(custom-set-face! :TodoFgPERF [] {:bg oxocharcoal.none :fg oxocharcoal.color28})
+
+(custom-set-face! :TodoBgTEST [] {:bg oxocharcoal.color32 :fg oxocharcoal.black})
+(custom-set-face! :TodoFgTEST [] {:bg oxocharcoal.none :fg oxocharcoal.color32})
+
+(custom-set-face! :TodoBgTODO [] {:bg oxocharcoal.color29 :fg oxocharcoal.black})
+(custom-set-face! :TodoFgTODO [] {:bg oxocharcoal.none :fg oxocharcoal.color29})
+
+(custom-set-face! :TodoBgWARN [] {:bg oxocharcoal.color9 :fg oxocharcoal.black})
+(custom-set-face! :TodoFgWARN [] {:bg oxocharcoal.none :fg oxocharcoal.color9})
+
+
 ;; search
 
 (custom-set-face! :IncSearch [] {:fg oxocharcoal.black :bg oxocharcoal.color1})
-(custom-set-face! :Search [] {:fg oxocharcoal.white :bg oxocharcoal.colowhiter32})
+(custom-set-face! :Search [] {:fg oxocharcoal.white :bg oxocharcoal.color32})
 
 ;; tabs
 
@@ -248,7 +278,7 @@
 (custom-set-face! :LspReferenceWrite [] {:fg oxocharcoal.none :bg oxocharcoal.grey03})
 (custom-set-face! :LspSignatureActiveParameter [:bold] {:fg oxocharcoal.teal :bg oxocharcoal.none})
 
-;; semantic classes mapping
+;; semrktjmp/hotpot.nvimantic classes mapping
 (custom-set-face! "keyword" [] {:fg oxocharcoal.color1 :bg oxocharcoal.none})
 (custom-set-face! "identifier" [] {:fg oxocharcoal.color2 :bg oxocharcoal.none})
 (custom-set-face! "string" [] {:fg oxocharcoal.color3 :bg oxocharcoal.none})
@@ -684,6 +714,8 @@
 
 ;; nvim-bufferline
 
+(custom-set-face! :BufferLineFill [] {:bg oxocharcoal.abyss :fg oxocharcoal.grey01})
+(custom-set-face! :BufferLineBackground [] {:bg oxocharcoal.black :fg oxocharcoal.grey02})
 (custom-set-face! :BufferLineDiagnostic [:bold]
                   {:fg oxocharcoal.color10 :bg oxocharcoal.none})
 
