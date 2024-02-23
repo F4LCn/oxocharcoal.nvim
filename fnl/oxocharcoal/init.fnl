@@ -192,7 +192,7 @@
 (custom-set-face! :DiffDelete [] {:bg (darken-hex oxocharcoal.color10 0.6) :fg oxocharcoal.none})
 
 ;; todo
-black
+
 (custom-set-face! :TodoBgFIX [] {:bg oxocharcoal.color10 :fg oxocharcoal.black})
 (custom-set-face! :TodoFgFIX [] {:bg oxocharcoal.none :fg oxocharcoal.color10})
 
