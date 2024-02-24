@@ -600,11 +600,11 @@
 
 (custom-set-face! :StatusLine [] {:fg oxocharcoal.grey05 :bg oxocharcoal.black})
 (custom-set-face! :StatusLineNC [] {:fg oxocharcoal.grey04 :bg oxocharcoal.grey01})
-(custom-set-face! :StatusReplace [] {:fg oxocharcoal.black :bg oxocharcoal.color1})
+(custom-set-face! :StatusReplace [] {:fg oxocharcoal.black :bg oxocharcoal.color24})
 (custom-set-face! :StatusInsert [] {:fg oxocharcoal.black :bg oxocharcoal.color34})
 (custom-set-face! :StatusVisual [] {:fg oxocharcoal.black :bg oxocharcoal.color2})
 (custom-set-face! :StatusTerminal [] {:fg oxocharcoal.black :bg oxocharcoal.grey03})
-(custom-set-face! :StatusNormal [] {:fg oxocharcoal.black :bg oxocharcoal.color24})
+(custom-set-face! :StatusNormal [] {:fg oxocharcoal.black :bg oxocharcoal.color1})
 (custom-set-face! :StatusCommand [] {:fg oxocharcoal.black :bg oxocharcoal.color3})
 (custom-set-face! :StatusLineDiagnosticWarn [] {:fg oxocharcoal.color9 :bg oxocharcoal.black})
 (custom-set-face! :StatusLineDiagnosticError [:bold] {:fg oxocharcoal.color10 :bg oxocharcoal.black})
