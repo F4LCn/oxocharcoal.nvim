@@ -67,6 +67,7 @@
                      :grey01 (blend-hex black white 0.085)
                      :grey02 (blend-hex black white 0.18)
                      :grey03 (blend-hex black white 0.3)
+                     :grey60 (blend-hex black white 0.6)
                      :grey04 (blend-hex black white 0.82)
                      :grey05 (blend-hex black white 0.95)
                      : white
@@ -255,6 +256,7 @@
 (custom-set-face! :DiagnosticUnderlineHint [:underdotted]
                   {:fg oxocharcoal.none :sp oxocharcoal.color29 :bg oxocharcoal.none})
 
+
 ;; health
 (custom-set-face! :HealthError [] {:fg oxocharcoal.color10 :bg oxocharcoal.none})
 (custom-set-face! :HealthWarning [] {:fg oxocharcoal.color9 :bg oxocharcoal.none})
@@ -273,12 +275,14 @@
 
 ;; lsp
 
+(custom-set-face! :LspInlayHint [] {:fg oxocharcoal.grey60 :bg oxocharcoal.none})
+(custom-set-face! :LspCodeLens [] {:fg oxocharcoal.grey60 :bg oxocharcoal.none})
 (custom-set-face! :LspReferenceText [] {:fg oxocharcoal.none :bg oxocharcoal.grey03})
 (custom-set-face! :LspReferenceread [] {:fg oxocharcoal.none :bg oxocharcoal.grey03})
 (custom-set-face! :LspReferenceWrite [] {:fg oxocharcoal.none :bg oxocharcoal.grey03})
 (custom-set-face! :LspSignatureActiveParameter [:bold] {:fg oxocharcoal.teal :bg oxocharcoal.none})
 
-;; semrktjmp/hotpot.nvimantic classes mapping
+;; semantic classes mapping
 (custom-set-face! "keyword" [] {:fg oxocharcoal.color1 :bg oxocharcoal.none})
 (custom-set-face! "identifier" [] {:fg oxocharcoal.color2 :bg oxocharcoal.none})
 (custom-set-face! "string" [] {:fg oxocharcoal.color3 :bg oxocharcoal.none})

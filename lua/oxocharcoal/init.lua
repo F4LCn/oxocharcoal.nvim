@@ -12,7 +12,7 @@ local black = "#0E0E0E"
 local white = "#ffffff"
 local blend = "#080808"
 local base09 = "#78a9ff"
-local oxocharcoal = {abyss = abyss, black = black, grey01 = blend_hex(black, white, 0.085), grey02 = blend_hex(black, white, 0.18), grey03 = blend_hex(black, white, 0.3), grey04 = blend_hex(black, white, 0.82), grey05 = blend_hex(black, white, 0.95), white = white, cyan = "#08bdba", teal = "#3ddbd9", base09 = base09, blue = "#33b1ff", pink = "#ff7eb6", green = "#42be65", lavander = "#be95ff", lightblue = "#82cfff", orange = "#ffc37e", color1 = "#94c4ff", color2 = "#e9b1ff", color3 = "#96be78", color4 = "#50b4be", color6 = "#808080", color7 = "#c8b47d", color8 = "#61afe1", color9 = "#e88c00", color10 = "#dd3962", color11 = "#c88cdc", color13 = "#b7b7b7", color14 = "#bed4e0", color16 = "#ffb987", color18 = "#ff9696", color19 = "#bbb529", color21 = "#80ff80", color22 = "#ffcf97", color24 = "#97f1fd", color27 = "#dadfe5", color28 = "#61afe1", color29 = "#00ff00", color30 = "#324146", color31 = "#c35082", color32 = "#283246", color33 = "#ffc86e", color34 = "#ff7eb6", color35 = "#c6dbff", blend = blend, none = "NONE"}
+local oxocharcoal = {abyss = abyss, black = black, grey01 = blend_hex(black, white, 0.085), grey02 = blend_hex(black, white, 0.18), grey03 = blend_hex(black, white, 0.3), grey60 = blend_hex(black, white, 0.6), grey04 = blend_hex(black, white, 0.82), grey05 = blend_hex(black, white, 0.95), white = white, cyan = "#08bdba", teal = "#3ddbd9", base09 = base09, blue = "#33b1ff", pink = "#ff7eb6", green = "#42be65", lavander = "#be95ff", lightblue = "#82cfff", orange = "#ffc37e", color1 = "#94c4ff", color2 = "#e9b1ff", color3 = "#96be78", color4 = "#50b4be", color6 = "#808080", color7 = "#c8b47d", color8 = "#61afe1", color9 = "#e88c00", color10 = "#dd3962", color11 = "#c88cdc", color13 = "#b7b7b7", color14 = "#bed4e0", color16 = "#ffb987", color18 = "#ff9696", color19 = "#bbb529", color21 = "#80ff80", color22 = "#ffcf97", color24 = "#97f1fd", color27 = "#dadfe5", color28 = "#61afe1", color29 = "#00ff00", color30 = "#324146", color31 = "#c35082", color32 = "#283246", color33 = "#ffc86e", color34 = "#ff7eb6", color35 = "#c6dbff", blend = blend, none = "NONE"}
 vim.g["terminal_color_0"] = oxocharcoal.grey01
 vim.g["terminal_color_1"] = oxocharcoal.blue
 vim.g["terminal_color_2"] = oxocharcoal.lavander
@@ -123,6 +123,8 @@ vim.api.nvim_set_hl(0, "@number.interval", {fg = oxocharcoal.base09, bg = oxocha
 vim.api.nvim_set_hl(0, "@number.status", {fg = oxocharcoal.pink, bg = oxocharcoal.none})
 vim.api.nvim_set_hl(0, "@number.quantity", {fg = oxocharcoal.blue, bg = oxocharcoal.none})
 vim.api.nvim_set_hl(0, "@number.quantity.negative", {fg = oxocharcoal.color10, bg = oxocharcoal.none})
+vim.api.nvim_set_hl(0, "LspInlayHint", {fg = oxocharcoal.grey60, bg = oxocharcoal.none})
+vim.api.nvim_set_hl(0, "LspCodeLens", {fg = oxocharcoal.grey60, bg = oxocharcoal.none})
 vim.api.nvim_set_hl(0, "LspReferenceText", {fg = oxocharcoal.none, bg = oxocharcoal.grey03})
 vim.api.nvim_set_hl(0, "LspReferenceread", {fg = oxocharcoal.none, bg = oxocharcoal.grey03})
 vim.api.nvim_set_hl(0, "LspReferenceWrite", {fg = oxocharcoal.none, bg = oxocharcoal.grey03})
