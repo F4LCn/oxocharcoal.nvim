@@ -752,4 +752,7 @@
 (custom-set-face! :WhichKeyDesc [] {:link "text"})
 (custom-set-face! :WhichKeyValue [] {:link "comment"})
 
+;; Lazy
+(custom-set-face! :LazySpecial [] {:link "uri"})
+
 { : oxocharcoal }
