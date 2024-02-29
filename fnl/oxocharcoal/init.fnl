@@ -134,7 +134,7 @@
 
 (custom-set-face! :ColorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
 (custom-set-face! :Conceal [] {:fg oxocharcoal.color6 :bg oxocharcoal.none})
-(custom-set-face! :CurSearch [:underline] {:fg oxocharcoal.black :bg oxocharcoal.color36})
+(custom-set-face! :CurSearch [:underline] {:fg oxocharcoal.black :bg oxocharcoal.color1})
 (custom-set-face! :Cursor [] {:fg oxocharcoal.black :bg oxocharcoal.white})
 (custom-set-face! :CursorLine [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
 (custom-set-face! :CursorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
