@@ -56,9 +56,9 @@
 ;; oxocharcoal palette
 
 (local abyss "#000000")
-(local black "#0E0E0E")
+(local black "#101010")
 (local white "#ffffff")
-(local blend "#080808")
+(local blend "#0B0B0B")
 (local base09 "#78a9ff")
 
 (local oxocharcoal {
