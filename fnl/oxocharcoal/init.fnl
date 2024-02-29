@@ -626,8 +626,8 @@
 (custom-set-face! :TelescopeResultsTitle [] {:fg oxocharcoal.blend :bg oxocharcoal.blend})
 (custom-set-face! :TelescopeSelection [] {:fg oxocharcoal.none :bg oxocharcoal.grey02})
 (custom-set-face! :TelescopePreviewLine [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
-(custom-set-face! :TelescopeMatching [] {:fg oxocharcoal.none :bg oxocharcoal.color36})
-(custom-set-face! :TelescopePreviewMatch [] {:fg oxocharcoal.none :bg oxocharcoal.color36})
+(custom-set-face! :TelescopeMatching [] {:fg oxocharcoal.black :bg oxocharcoal.color36})
+(custom-set-face! :TelescopePreviewMatch [] {:fg oxocharcoal.black :bg oxocharcoal.color36})
 
 ;; notify
 
