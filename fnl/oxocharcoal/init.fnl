@@ -107,6 +107,7 @@
                      :color33 "#ffc86e"
                      :color34 "#ff7eb6"
                      :color35 "#c6dbff"
+                     :color36 "#5378c8"
                      : blend
                      :none :NONE})
 
@@ -133,7 +134,7 @@
 
 (custom-set-face! :ColorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
 (custom-set-face! :Conceal [] {:fg oxocharcoal.color6 :bg oxocharcoal.none})
-(custom-set-face! :CurSearch [:underline] {:fg oxocharcoal.black :bg oxocharcoal.color1})
+(custom-set-face! :CurSearch [:underline] {:fg oxocharcoal.black :bg oxocharcoal.color36})
 (custom-set-face! :Cursor [] {:fg oxocharcoal.black :bg oxocharcoal.white})
 (custom-set-face! :CursorLine [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
 (custom-set-face! :CursorColumn [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
@@ -625,7 +626,8 @@
 (custom-set-face! :TelescopeResultsTitle [] {:fg oxocharcoal.blend :bg oxocharcoal.blend})
 (custom-set-face! :TelescopeSelection [] {:fg oxocharcoal.none :bg oxocharcoal.grey02})
 (custom-set-face! :TelescopePreviewLine [] {:fg oxocharcoal.none :bg oxocharcoal.grey01})
-(custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocharcoal.teal :bg oxocharcoal.none})
+(custom-set-face! :TelescopeMatching [] {:fg oxocharcoal.none :bg oxocharcoal.color36})
+(custom-set-face! :TelescopePreviewMatch [] {:fg oxocharcoal.none :bg oxocharcoal.color36})
 
 ;; notify
 

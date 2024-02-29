@@ -12,7 +12,7 @@ local black = "#0E0E0E"
 local white = "#ffffff"
 local blend = "#080808"
 local base09 = "#78a9ff"
-local oxocharcoal = {abyss = abyss, black = black, grey01 = blend_hex(black, white, 0.085), grey02 = blend_hex(black, white, 0.18), grey03 = blend_hex(black, white, 0.3), grey60 = blend_hex(black, white, 0.6), grey04 = blend_hex(black, white, 0.82), grey05 = blend_hex(black, white, 0.95), white = white, cyan = "#08bdba", teal = "#3ddbd9", base09 = base09, blue = "#33b1ff", pink = "#ff7eb6", green = "#42be65", lavander = "#be95ff", lightblue = "#82cfff", orange = "#ffc37e", color1 = "#94c4ff", color2 = "#e9b1ff", color3 = "#96be78", color4 = "#50b4be", color6 = "#808080", color7 = "#c8b47d", color8 = "#61afe1", color9 = "#e88c00", color10 = "#dd3962", color11 = "#c88cdc", color13 = "#b7b7b7", color14 = "#bed4e0", color16 = "#ffb987", color18 = "#ff9696", color19 = "#bbb529", color21 = "#80ff80", color22 = "#ffcf97", color24 = "#97f1fd", color27 = "#dadfe5", color28 = "#61afe1", color29 = "#00ff00", color30 = "#324146", color31 = "#c35082", color32 = "#283246", color33 = "#ffc86e", color34 = "#ff7eb6", color35 = "#c6dbff", blend = blend, none = "NONE"}
+local oxocharcoal = {abyss = abyss, black = black, grey01 = blend_hex(black, white, 0.085), grey02 = blend_hex(black, white, 0.18), grey03 = blend_hex(black, white, 0.3), grey60 = blend_hex(black, white, 0.6), grey04 = blend_hex(black, white, 0.82), grey05 = blend_hex(black, white, 0.95), white = white, cyan = "#08bdba", teal = "#3ddbd9", base09 = base09, blue = "#33b1ff", pink = "#ff7eb6", green = "#42be65", lavander = "#be95ff", lightblue = "#82cfff", orange = "#ffc37e", color1 = "#94c4ff", color2 = "#e9b1ff", color3 = "#96be78", color4 = "#50b4be", color6 = "#808080", color7 = "#c8b47d", color8 = "#61afe1", color9 = "#e88c00", color10 = "#dd3962", color11 = "#c88cdc", color13 = "#b7b7b7", color14 = "#bed4e0", color16 = "#ffb987", color18 = "#ff9696", color19 = "#bbb529", color21 = "#80ff80", color22 = "#ffcf97", color24 = "#97f1fd", color27 = "#dadfe5", color28 = "#61afe1", color29 = "#00ff00", color30 = "#324146", color31 = "#c35082", color32 = "#283246", color33 = "#ffc86e", color34 = "#ff7eb6", color35 = "#c6dbff", color36 = "#5378c8", blend = blend, none = "NONE"}
 vim.g["terminal_color_0"] = oxocharcoal.grey01
 vim.g["terminal_color_1"] = oxocharcoal.blue
 vim.g["terminal_color_2"] = oxocharcoal.lavander
@@ -31,7 +31,7 @@ vim.g["terminal_color_14"] = oxocharcoal.cyan
 vim.g["terminal_color_15"] = oxocharcoal.white
 vim.api.nvim_set_hl(0, "ColorColumn", {fg = oxocharcoal.none, bg = oxocharcoal.grey01})
 vim.api.nvim_set_hl(0, "Conceal", {fg = oxocharcoal.color6, bg = oxocharcoal.none})
-vim.api.nvim_set_hl(0, "CurSearch", {fg = oxocharcoal.black, bg = oxocharcoal.color1, underline = true})
+vim.api.nvim_set_hl(0, "CurSearch", {fg = oxocharcoal.black, bg = oxocharcoal.color36, underline = true})
 vim.api.nvim_set_hl(0, "Cursor", {fg = oxocharcoal.black, bg = oxocharcoal.white})
 vim.api.nvim_set_hl(0, "CursorLine", {fg = oxocharcoal.none, bg = oxocharcoal.grey01})
 vim.api.nvim_set_hl(0, "CursorColumn", {fg = oxocharcoal.none, bg = oxocharcoal.grey01})
@@ -327,7 +327,8 @@ vim.api.nvim_set_hl(0, "TelescopePromptTitle", {fg = oxocharcoal.grey01, bg = ox
 vim.api.nvim_set_hl(0, "TelescopeResultsTitle", {fg = oxocharcoal.blend, bg = oxocharcoal.blend})
 vim.api.nvim_set_hl(0, "TelescopeSelection", {fg = oxocharcoal.none, bg = oxocharcoal.grey02})
 vim.api.nvim_set_hl(0, "TelescopePreviewLine", {fg = oxocharcoal.none, bg = oxocharcoal.grey01})
-vim.api.nvim_set_hl(0, "TelescopeMatching", {fg = oxocharcoal.teal, bg = oxocharcoal.none, bold = true, italic = true})
+vim.api.nvim_set_hl(0, "TelescopeMatching", {fg = oxocharcoal.none, bg = oxocharcoal.color36})
+vim.api.nvim_set_hl(0, "TelescopePreviewMatch", {fg = oxocharcoal.none, bg = oxocharcoal.color36})
 vim.api.nvim_set_hl(0, "NotifyERRORBorder", {fg = oxocharcoal.color10, bg = oxocharcoal.none})
 vim.api.nvim_set_hl(0, "NotifyWARNBorder", {fg = oxocharcoal.color9, bg = oxocharcoal.none})
 vim.api.nvim_set_hl(0, "NotifyINFOBorder", {fg = oxocharcoal.color28, bg = oxocharcoal.none})
@@ -415,4 +416,5 @@ vim.api.nvim_set_hl(0, "WhichKey", {link = "method"})
 vim.api.nvim_set_hl(0, "WhichKeyGroup", {link = "keyword"})
 vim.api.nvim_set_hl(0, "WhichKeyDesc", {link = "text"})
 vim.api.nvim_set_hl(0, "WhichKeyValue", {link = "comment"})
+vim.api.nvim_set_hl(0, "LazySpecial", {link = "uri"})
 return {oxocharcoal = oxocharcoal}
