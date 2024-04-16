@@ -113,21 +113,29 @@
 
 ;; terminal
 
+;; black
 (let! terminal_color_0 oxocharcoal.black)
-(let! terminal_color_1 oxocharcoal.color29)
-(let! terminal_color_2 oxocharcoal.color29)
-(let! terminal_color_3 oxocharcoal.color9)
-(let! terminal_color_4 oxocharcoal.color1)
-(let! terminal_color_5 "#FF7EB6")
-(let! terminal_color_6 oxocharcoal.color4)
-(let! terminal_color_7 oxocharcoal.grey05)
 (let! terminal_color_8 oxocharcoal.grey02)
-(let! terminal_color_9 oxocharcoal.color18)
-(let! terminal_color_10 oxocharcoal.color3)
+;; red
+(let! terminal_color_1 oxocharcoal.color18)
+(let! terminal_color_9 oxocharcoal.color10)
+;; green
+(let! terminal_color_2 oxocharcoal.color3)
+(let! terminal_color_10 oxocharcoal.color29)
+;; yellow
+(let! terminal_color_3 oxocharcoal.color9)
 (let! terminal_color_11 oxocharcoal.color16)
-(let! terminal_color_12 oxocharcoal.color8)
+;; blue
+(let! terminal_color_4 oxocharcoal.color8)
+(let! terminal_color_12 oxocharcoal.color1)
+;; magenta
+(let! terminal_color_5 "#FF7EB6")
 (let! terminal_color_13 "#FF7EB6")
+;; cyan
+(let! terminal_color_6 oxocharcoal.color4)
 (let! terminal_color_14 oxocharcoal.color4)
+;; white
+(let! terminal_color_7 oxocharcoal.grey04)
 (let! terminal_color_15 oxocharcoal.white)
 
 ;; editor
