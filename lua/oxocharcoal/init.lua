@@ -417,4 +417,7 @@ vim.api.nvim_set_hl(0, "WhichKeyGroup", {link = "keyword"})
 vim.api.nvim_set_hl(0, "WhichKeyDesc", {link = "text"})
 vim.api.nvim_set_hl(0, "WhichKeyValue", {link = "comment"})
 vim.api.nvim_set_hl(0, "LazySpecial", {link = "uri"})
+vim.api.nvim_set_hl(0, "IlluminatedWordText", {fg = oxocharcoal.none, bg = oxocharcoal.none})
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", {fg = oxocharcoal.none, bg = oxocharcoal.none})
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {fg = oxocharcoal.none, bg = oxocharcoal.none})
 return {oxocharcoal = oxocharcoal}

@@ -765,4 +765,9 @@
 ;; Lazy
 (custom-set-face! :LazySpecial [] {:link "uri"})
 
+;; disable illuminate default highlighting
+(custom-set-face! :IlluminatedWordText [] {:fg oxocharcoal.none :bg oxocharcoal.none})
+(custom-set-face! :IlluminatedWordRead [] {:fg oxocharcoal.none :bg oxocharcoal.none})
+(custom-set-face! :IlluminatedWordWrite [] {:fg oxocharcoal.none :bg oxocharcoal.none})
+
 { : oxocharcoal }
