@@ -100,7 +100,7 @@ vim.api.nvim_set_hl(0, "Title", {fg = oxocharcoal.grey04, bg = oxocharcoal.none}
 vim.api.nvim_set_hl(0, "VertSplit", {fg = oxocharcoal.grey01, bg = oxocharcoal.black})
 vim.api.nvim_set_hl(0, "NvimInternalError", {fg = oxocharcoal.black, bg = oxocharcoal.color10})
 vim.api.nvim_set_hl(0, "NormalFloat", {fg = oxocharcoal.grey05, bg = oxocharcoal.blend})
-vim.api.nvim_set_hl(0, "FloatBorder", {fg = oxocharcoal.blend, bg = oxocharcoal.blend})
+vim.api.nvim_set_hl(0, "FloatBorder", {fg = oxocharcoal.grey02, bg = oxocharcoal.blend})
 vim.api.nvim_set_hl(0, "NormalNC", {fg = oxocharcoal.grey03, bg = oxocharcoal.black})
 vim.api.nvim_set_hl(0, "TermCursor", {fg = oxocharcoal.black, bg = oxocharcoal.grey04})
 vim.api.nvim_set_hl(0, "TermCursorNC", {fg = oxocharcoal.black, bg = oxocharcoal.grey04})

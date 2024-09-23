@@ -245,7 +245,7 @@
 
 (custom-set-face! :NvimInternalError [] {:fg oxocharcoal.black :bg oxocharcoal.color10})
 (custom-set-face! :NormalFloat [] {:fg oxocharcoal.grey05 :bg oxocharcoal.blend})
-(custom-set-face! :FloatBorder [] {:fg oxocharcoal.blend :bg oxocharcoal.blend})
+(custom-set-face! :FloatBorder [] {:fg oxocharcoal.grey02 :bg oxocharcoal.blend})
 (custom-set-face! :NormalNC [] {:fg oxocharcoal.grey03 :bg oxocharcoal.black})
 (custom-set-face! :TermCursor [] {:fg oxocharcoal.black :bg oxocharcoal.grey04})
 (custom-set-face! :TermCursorNC [] {:fg oxocharcoal.black :bg oxocharcoal.grey04})
