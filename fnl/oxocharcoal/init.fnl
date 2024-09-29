@@ -728,8 +728,11 @@
 
 ;; nvim-bufferline
 
-(custom-set-face! :BufferLineFill [] {:bg oxocharcoal.abyss :fg oxocharcoal.grey01})
-(custom-set-face! :BufferLineBackground [] {:bg oxocharcoal.black :fg oxocharcoal.grey02})
+(custom-set-face! :BufferLineSeparator [] {:bg oxocharcoal.black :fg oxocharcoal.black})
+(custom-set-face! :BufferLineSeparatorSelected [] {:link "BufferLineSeparator"})
+(custom-set-face! :BufferLineFill [] {:bg oxocharcoal.abyss :fg oxocharcoal.abyss})
+(custom-set-face! :BufferLineBackground [] {:bg oxocharcoal.black :fg oxocharcoal.grey04})
+(custom-set-face! :BufferLineBackgroundSelected [] {:bg oxocharcoal.grey01 :fg oxocharcoal.white})
 (custom-set-face! :BufferLineDiagnostic [:bold]
                   {:fg oxocharcoal.color10 :bg oxocharcoal.none})
 
